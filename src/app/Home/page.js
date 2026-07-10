@@ -401,7 +401,7 @@ every detail is owned in-house.
     <section className="git-section">
       <div className="git-container">
         {/* Logo — replace src with your own file */}
-        <img src="/Images/vision.webp" alt="Vision Infinite" className="git-logo" />
+        <img src="/Images/Vision.webp" alt="Vision Infinite" className="git-logo" />
  
         <h2 className="git-tagline">
           Let&rsquo;s build a real-world brand
