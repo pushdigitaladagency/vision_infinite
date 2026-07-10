@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import "./Services.css";
 
@@ -30,16 +31,16 @@ const filmVideos = [
   "/Videos/Video3.mp4",
   "/Videos/Video4.mp4",
   "/Videos/Video5.mp4",
-  "/Videos/Video6.mp4",
 ];
 
-const allVideos = [...filmVideos, ...filmVideos];
+const allVideos = [...filmVideos, ...filmVideos, ...filmVideos, ...filmVideos];
 
 const categories = [
   {
     title: "Theatre Branding",
+    href: "/services/theatre-branding",
     bgClass: "category-card-theatre",
-    image: "/Images/box-1.webp",
+    image: "/Images/blue.webp",
     tags: [
       { text: "On-screen cinema advertising", className: "category-tag-theatre-1" },
       { text: "Counter branding", className: "category-tag-theatre-2" },
@@ -49,8 +50,9 @@ const categories = [
   },
   {
     title: "Events",
+    href: "/services/events",
     bgClass: "category-card-events",
-    image: "/Images/Service2.svg",
+    image: "/Images/green.webp",
     tags: [
       { text: "Conferences", className: "category-tag-events-1" },
       { text: "Awards ceremonies", className: "category-tag-events-2" },
@@ -61,7 +63,7 @@ const categories = [
   {
     title: "BTL Activations",
     bgClass: "category-card-btl",
-    image: "/Images/Service3.svg",
+    image: "/Images/sky.webp",
     tags: [
       { text: "Apartment & corporate activations", className: "category-tag-btl-1" },
       { text: "Auto branding", className: "category-tag-btl-2" },
@@ -72,7 +74,7 @@ const categories = [
   {
     title: "Branding Solutions",
     bgClass: "category-card-branding",
-    image: "/Images/Service4.svg",
+    image: "/Images/pink.webp",
     tags: [
       { text: "Wall painting", className: "category-tag-branding-1" },
       { text: "Signages", className: "category-tag-branding-2" },
@@ -83,7 +85,7 @@ const categories = [
   {
     title: "Outdoor Advertising",
     bgClass: "category-card-outdoor",
-    image: "/Images/Service5.svg",
+    image: "/Images/white.webp",
     tags: [
       { text: "Unipole center medians", className: "category-tag-outdoor-1" },
       { text: "Pole kiosks", className: "category-tag-outdoor-2" },
@@ -177,110 +179,139 @@ export default function services() {
       <section className="categories-section">
         <div className="categories-container">
           <div className="categories-grid">
-            {categories.map((cat, index) => (
-              <div
-                key={index}
-                className={`category-card ${cat.bgClass}`}
-              >
-                <h3 className="category-title">{cat.title}</h3>
+            {categories.map((cat, index) => {
+              const Card = cat.href ? Link : "div";
 
-                <div className="category-image-wrapper">
-                  <div className="category-image-inner">
-                    <Image
-                      src={cat.image}
-                      alt={cat.title}
-                      fill
-                      className="category-image"
-                    />
+              return (
+                <Card
+                  key={index}
+                  href={cat.href}
+                  className={`category-card ${cat.bgClass}`}
+                >
+                  <h3 className="category-title">{cat.title}</h3>
+
+                  <div className="category-image-wrapper">
+                    <div className="category-image-inner">
+                      <Image
+                        src={cat.image}
+                        alt={cat.title}
+                        fill
+                        className="category-image"
+                      />
+                    </div>
+
+                    {cat.tags.map((tag, i) => (
+                      <div
+                        key={i}
+                        className={`category-tag ${tag.className}`}
+                      >
+                        {tag.text}
+                      </div>
+                    ))}
                   </div>
 
-                  {cat.tags.map((tag, i) => (
-                    <div
-                      key={i}
-                      className={`category-tag ${tag.className}`}
-                    >
-                      {tag.text}
-                    </div>
-                  ))}
-                </div>
-
-                <button className="explore-btn">
+                  <span className="explore-btn">
                   Explore &rarr;
-                </button>
-              </div>
-            ))}
+                  </span>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
 
       {/* ── Contact Section ──────────────────────────── */}
-      <section className="contact-section">
-        <div className="contact-container">
-          <div className="contact-header">
-            <Image src="/Images/Vision.webp" alt="Infinity Logo" width={60} height={40} />
-            <h2>Let’s build a real-world brand<br />experience.</h2>
-            <p className="contact-subtitle">CONNECT US</p>
-            <h3>Get In Touch</h3>
-          </div>
-
-          <div className="contact-content">
-            <div className="contact-form">
-              <div className="form-row">
-                <div className="form-group">
-                  <label>First Name</label>
-                  <input type="text" placeholder="John" />
-                </div>
-                <div className="form-group">
-                  <label>Mobile Number</label>
-                  <input type="text" placeholder="+91" />
-                </div>
+      <section className="git-section">
+      <div className="git-container">
+        {/* Logo — replace src with your own file */}
+        <img src="/Images/Vision.webp" alt="Vision Infinite" className="git-logo" />
+ 
+        <h2 className="git-tagline">
+          Let&rsquo;s build a real-world brand
+          <br />
+          experience.
+        </h2>
+ 
+        <p className="git-eyebrow">CONNECT US</p>
+        <h3 className="git-heading">Get In Touch</h3>
+ 
+        <div className="git-grid">
+          {/* ---- Left: form ---- */}
+          <form className="git-form">
+            <div className="git-row">
+              <div className="git-field">
+                <label htmlFor="git-first-name">First Name</label>
+                <input
+                  id="git-first-name"
+                  name="firstName"
+                  type="text"
+                  placeholder="John"
+                  required
+                />
               </div>
-              
-              <div className="form-row">
-                <div className="form-group">
-                  <label>Email Address</label>
-                  <input type="email" placeholder="john@example.com" />
-                </div>
-                <div className="form-group">
-                  <label>Services Wanted</label>
-                  <select defaultValue="Events">
-                    <option value="Events">Events</option>
-                    <option value="Theatre Branding">Theatre Branding</option>
-                    <option value="BTL Activations">BTL Activations</option>
-                    <option value="Outdoor Advertising">Outdoor Advertising</option>
-                  </select>
-                </div>
-              </div>
-
-              <div className="form-group">
-                <label>Message</label>
-                <textarea rows="4" placeholder="Tell us about your project..."></textarea>
-              </div>
-
-              <button className="send-btn">
-                Send Message
-                <svg className="send-btn-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <line x1="22" y1="2" x2="11" y2="13"></line>
-                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
-                </svg>
-              </button>
-            </div>
-
-            <div className="contact-image">
-              <div className="contact-image-wrapper">
-                <video
-                  src="/Videos/Video3.mp4"
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="contact-video"
+ 
+              <div className="git-field">
+                <label htmlFor="git-mobile">Mobile Number</label>
+                <input
+                  id="git-mobile"
+                  name="mobile"
+                  type="tel"
+                  placeholder="+91"
+                  required
                 />
               </div>
             </div>
+ 
+            <div className="git-row">
+              <div className="git-field">
+                <label htmlFor="git-email">Email Address</label>
+                <input
+                  id="git-email"
+                  name="email"
+                  type="email"
+                  placeholder="john@example.com"
+                  required
+                />
+              </div>
+ 
+              <div className="git-field">
+                <label htmlFor="git-service">Services Wanted</label>
+                <select id="git-service" name="service" defaultValue="Events">
+                  <option value="Events">Events</option>
+                  <option value="Theatre Branding">Theatre Branding</option>
+                  <option value="Mall Activations">Mall Activations</option>
+                  <option value="Exhibition Pavilions">
+                    Exhibition Pavilions
+                  </option>
+                  <option value="Product Launches">Product Launches</option>
+                </select>
+              </div>
+            </div>
+ 
+            <div className="git-field">
+              <label htmlFor="git-message">Message</label>
+              <textarea
+                id="git-message"
+                name="message"
+                rows={5}
+                placeholder="Tell us about your project..."
+              />
+            </div>
+ 
+            <button type="submit" className="git-submit">
+              Send Message <span className="git-submit-icon">&#9655;</span>
+            </button>
+          </form>
+ 
+          {/* ---- Right: image — replace src with your own file ---- */}
+          <div className="git-image">
+            <video autoPlay muted loop playsInline preload="auto">
+              <source src="/Videos/Video3.mp4" type="video/mp4" />
+            </video>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
     </>
   );
 }

@@ -91,16 +91,19 @@ const PROJECTS = [
       <section className="hero">
          <video
     className="hero-video"
+    src="/Videos/header_video.mp4"
     autoPlay
     muted
     loop
     playsInline
     preload="auto"
     poster="/Images/header-image.webp"
-  >
-    <source src="/Videos/header_video.mp4" type="video/mp4" />
-  </video>
-       <img className= "img_header"src="/Images/header-image.webp" alt="Logo" />
+  />
+       <img
+         className="img_header"
+         src="/Images/header-image.webp"
+         alt="Vision Infinite hero"
+       />
         <div className="hero-content">
           <span className="hero-label">Experiential Branding & Event Solutions</span>
           <h1>

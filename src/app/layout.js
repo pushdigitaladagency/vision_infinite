@@ -15,9 +15,17 @@ export default function RootLayout({ children }) {
       <head>
         <link
           rel="preload"
-          href="/Images/header_video.mp4"
+          href="/Videos/header_video.mp4"
           as="video"
           type="video/mp4"
+          fetchPriority="high"
+        />
+        <link
+          rel="preload"
+          href="/Images/header-image.webp"
+          as="image"
+          type="image/webp"
+          fetchPriority="high"
         />
       </head>
       <body>

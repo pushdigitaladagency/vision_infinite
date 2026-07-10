@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-column footer-brand">
           <div className="footer-logo">
-            <img src="/Images/Vision.webp" alt="Vision Infinite" />
+            <img src="/Images/Vision_Infinite_logo.webp" alt="Vision Infinite" />
           </div>
           <p className="footer-description">
             Experiential branding &amp; event solutions.<br />
