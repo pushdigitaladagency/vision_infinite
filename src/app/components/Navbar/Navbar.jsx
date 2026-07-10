@@ -36,7 +36,7 @@ export default function Navbar() {
       <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
         {/* Logo */}
         <Link href="/" className="navbar-logo">
-           <img className= "vision_img"src="/Images/Vision_infinite_logo.webp" alt="Logo" />
+           <img className= "vision_img"src="Images/Vision_infinite_logo.webp" alt="Logo" />
    
         </Link>
 
