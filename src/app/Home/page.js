@@ -165,9 +165,11 @@ Talk to us
           </p>
  
           <h2 className="about-heading">
-            Where brands
-            <br />
-            become
+            <span className="about-heading-line">
+              Where brands
+              <br className="about-mobile-break" />
+              {" "}become
+            </span>
             <br />
             <span className="about-gradient">experiences</span>
             <span className="about-dot">.</span>

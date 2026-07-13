@@ -139,12 +139,15 @@ width: 124px;
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .navbar {
-    padding: 14px 24px;
-  }
-
+        padding: 2px 20px;
+    }
   .hamburger {
     display: flex;
   }
+  .vision_img {
+    width: 107px;
+    height: 53px;
+}
 
   .nav-links {
     position: fixed;

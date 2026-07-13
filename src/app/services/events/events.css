@@ -658,9 +658,11 @@
 
 /* ---- Responsive ---- */
 @media (max-width: 640px) {
-  .gal-section {
-    padding: 56px 0 72px;
-  }
+
+   .gal-section {
+        padding: 26px 0 21px;
+    }
+  
 
   .gal-heading {
     font-size: 28px;
@@ -720,12 +722,24 @@
   }
 }
 /* ---- Responsive ---- */
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .wds-item {
     grid-template-columns: 1fr;
     gap: 24px;
     margin-bottom: 64px;
   }
+  .git-logo {
+    width: 89px;
+    height: auto;
+    margin: 0 auto 28px;
+    display: block;
+}
+.wds-desc {
+    color: #6a6a6a;
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.6;
+}
 
   /* when stacked, image always on top */
   .wds-item-reverse .wds-image {
@@ -739,6 +753,11 @@
   .wds-desc {
     max-width: none;
   }
+  .gal-image {
+    width: 100%;
+    height: 213px;
+    display: block;
+}
 }
 
 @media (max-width: 480px) {

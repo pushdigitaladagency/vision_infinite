@@ -241,6 +241,7 @@
   }
 }
 
+
 /* ═══════════════════════════════════════════════
    Film Strip Section
    ═══════════════════════════════════════════════ */
@@ -787,6 +788,166 @@
   position: absolute;
   inset: 0;
 }
+@media (max-width: 768px) {
+      .orbit-wrapper {
+        --orbit-card-width: 104px;
+        --orbit-card-height: 80px;
+        width: min(100%, 430px);
+        max-width: 2509px;
+        height: 356px;
+        margin: 0 auto;
+        display: block;
+        position: relative;
+    }
+
+  .orbit-card {
+    position: absolute !important;
+    width: var(--orbit-card-width) !important;
+    height: var(--orbit-card-height) !important;
+    transform: none !important;
+  }
+
+  .orbit-card-1 {
+    top: 59px;
+    left: 41px;
+  }
+
+  .orbit-card-2 {
+    top: 18px;
+    left: 50%;
+    transform: translateX(-50%) !important;
+  }
+
+  .orbit-card-3 {
+    top: 59px;
+    right: 33px;
+  }
+
+  .orbit-card-4 {
+    top: 153px;
+    left: 6px;
+  }
+
+  .orbit-card-5 {
+    top: 153px;
+    right: 2px;
+  }
+
+  .orbit-card-6 {
+    bottom: 37px;
+    left: 41px;
+  }
+
+  .orbit-card-7 {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) !important;
+  }
+
+  .orbit-card-8 {
+    right: 33px;
+    bottom: 37px;
+  }
+
+  .orbit-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    grid-column: auto;
+    width: 96px;
+    margin: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  .orbit-center-logo {
+    width: 38px;
+    margin-bottom: 4px;
+  }
+
+  .orbit-center h3 {
+    font-size: 11px;
+    margin-bottom: 2px;
+  }
+
+  .orbit-center span {
+    font-size: 16px;
+  }
+  .services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 0px;
+}
+    .services {
+        background: #fff;
+        padding: 6px 6px;
+    }
+.filmstrip-wrapper {
+    width: 100%;
+    padding: 30px 0;
+    overflow: hidden;
+}
+.film-frame {
+    width: 220px;
+    height: 150px;
+}
+}
+
+@media (max-width: 420px) {
+  .orbit-wrapper {
+    --orbit-card-width: 88px;
+    --orbit-card-height: 66px;
+    width: min(100%, 350px);
+    max-width: 350px;
+    height: 336px;
+  }
+
+  .orbit-card-1 {
+    top: 62px;
+    left: 22px;
+  }
+
+  .orbit-card-2 {
+    top: 16px;
+  }
+
+  .orbit-card-3 {
+    top: 62px;
+    right: 22px;
+  }
+
+  .orbit-card-4 {
+    top: 154px;
+    left: 0;
+  }
+
+  .orbit-card-5 {
+    top: 154px;
+    right: 0;
+  }
+
+  .orbit-card-6 {
+    bottom: 24px;
+    left: 22px;
+  }
+
+  .orbit-card-7 {
+    bottom: 0;
+  }
+
+  .orbit-card-8 {
+    right: 22px;
+    bottom: 24px;
+  }
+
+  .orbit-center {
+    width: 86px;
+  }
+  .categories-section {
+    background: #000;
+    padding: 4px 0;
+}
+
+}
 
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
@@ -809,6 +970,15 @@
     font-size: 32px;
     margin-bottom: 40px;
   }
+  .services {
+    background: #fff;
+    padding: 80px 6px;
+}
+    .services {
+        background: #fff;
+        padding: 6px 6px;
+    }
+
 }
 
 @media (max-width: 560px) {
