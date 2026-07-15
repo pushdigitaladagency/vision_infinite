@@ -273,26 +273,33 @@ export default function EventsHero() {
 
       {/* Single rope + badges image with live text overlaid on each tag.
           Label positions live in GallerySection.css (.br-gal-tag-1 ... .br-gal-tag-5) */}
+          <div className="fw-section">
+            <img
+              src="/Images/background-img.webp"
+              alt="V Care Hair Therapy"
+              className="fw-bg-image"
+            />
       <div className="fw-row">
         {/* ---- Frame 1 ---- */}
         <div className="fw-frame">
           <div className="fw-image">
-            <img src="/Images/frame-1.webp" alt="V Care Opening Ceremony" />
+            <img src="/Images/welcome.webp" alt="V Care Opening Ceremony" />
           </div>
         </div>
  
         {/* ---- Frame 2 ---- */}
         <div className="fw-frame">
           <div className="fw-image">
-            <img src="/Images/frame-2.webp" alt="V Care Hair Therapy" />
+            <img src="/Images/paper-branding.webp" alt="V Care Hair Therapy" />
           </div>
         </div>
  
         {/* ---- Frame 3 ---- */}
         <div className="fw-frame">
           <div className="fw-image">
-            <img src="/Images/frame-3.webp" alt="Mercely's Ice Cream" />
+            <img src="/Images/icecream.webp" alt="Mercely's Ice Cream" />
           </div>
+        </div>
         </div>
       </div>
     </section>

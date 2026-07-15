@@ -86,6 +86,7 @@ const categories = [
   },
   {
     title: "Outdoor Advertising",
+    href: "/services/outdoor-advertising",
     bgClass: "category-card-outdoor",
     image: "/Images/white.webp",
     tags: [

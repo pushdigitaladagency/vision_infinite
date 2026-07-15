@@ -1,15 +1,15 @@
-.br-eh-section {
+.od-eh-section {
   background: #fafafa;
   padding: 72px 24px 96px;
 }
 
-.br-eh-container {
+.od-eh-container {
   max-width: 1636px;
   margin: 0 auto;
 }
 
 /* ---- Eyebrow ---- */
-.br-eh-eyebrow {
+.od-eh-eyebrow {
   color: #6a6a6a;
   font-size: 13px;
   font-weight: 600;
@@ -18,20 +18,20 @@
   margin: 88px 11px 23px;
   text-transform: uppercase;
 }
-.br-successful {
+.od-successful {
   color: #111;
   font-size: 20px;
   line-height: 2.0;
   margin: 0px 0px 23px;
 }
-.br-successful-2 {
+.od-successful-2 {
   color: #111;
   font-size: 20px;
   line-height: 2.0;
   margin: 0;
 }
 /* ---- Heading ---- */
-.br-eh-heading {
+.od-eh-heading {
   color: #111;
   font-size: 44px;
   font-weight: 800;
@@ -41,7 +41,7 @@
   margin: 0 0 56px;
 }
 
-.br-eh-gradient {
+.od-eh-gradient {
   background: linear-gradient(90deg, #e6127d 0%, #8b3ff0 55%, #3b9df5 100%);
   -webkit-background-clip: text;
   background-clip: text;
@@ -49,7 +49,7 @@
 }
 
 /* ---- Banner image with overlay ---- */
-.br-eh-banner {
+.od-eh-banner {
   position: relative;
  width: min(100%, 1423px);
     height: 543px;
@@ -58,14 +58,14 @@
   overflow: hidden;
 }
 
-.br-eh-banner img {
+.od-eh-banner img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
 }
 
-.br-eh-banner-overlay {
+.od-eh-banner-overlay {
   position: absolute;
   left: 0;
   right: 0;
@@ -79,24 +79,24 @@
   );
 }
 
-.br-eh-banner-title {
+.od-eh-banner-title {
   color: #fff;
   font-size: 40px;
   font-weight: 800;
   margin: 0 0 8px;
 }
 
-.br-eh-banner-subtitle {
+.od-eh-banner-subtitle {
   color: #e6e6e6;
   font-size: 15px;
   margin: 0;
 }
-.br-wds-section {
+.od-wds-section {
     background: #fff;
     padding: 72px 24px 2px;
 }
 
-.br-wds-container {
+.od-wds-container {
   background: transparent;
   isolation: isolate;
   margin: 0;
@@ -109,7 +109,7 @@
   color:#fff
 }
 /* ---- Heading ---- */
-.br-wds-heading {
+.od-wds-heading {
   color: #111;
   font-size: 32px;
   font-weight: 800;
@@ -118,7 +118,7 @@
 }
 
 /* ---- Alternating items ---- */
-.br-wds-item {
+.od-wds-item {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -135,56 +135,52 @@
   z-index: 0;
 }
 
-.br-wds-item:last-child {
+.od-wds-item:last-child {
   margin-bottom: 0;
 }
 
-.br-wds-item:nth-of-type(1) {
+.od-wds-item:nth-of-type(1) {
   background: #5F5DCB;
 }
 
-.br-wds-item:nth-of-type(2) {
+.od-wds-item:nth-of-type(2) {
   background: #FFBEF9;
 }
 
-.br-wds-container .br-wds-item.br-wds-panel-product-launches {
+.od-wds-container .od-wds-item.od-wds-panel-product-launches {
   background: #FFBEF9;
 }
 
-.br-wds-item:nth-of-type(3) {
+.od-wds-item:nth-of-type(3) {
   background: #6CC8FF;
 }
 
-.br-wds-container .br-wds-item.br-wds-panel-awards-night {
+.od-wds-container .od-wds-item.od-wds-panel-awards-night {
   background: #6CC8FF;
 }
 
-.br-wds-item:nth-of-type(4) {
-  background: #FFFCAC;
-}
-
-.br-wds-container .br-wds-item.br-wds-panel-mini-concerts {
+.od-wds-item:nth-of-type(4) {
   background: #FFFCAC;
 }
 
 /* even blocks flip: text left, image right */
-.br-wds-item-reverse .br-wds-image {
+.od-wds-item-reverse .od-wds-image {
   order: 2;
 }
 
-.br-wds-item-reverse .br-wds-content {
+.od-wds-item-reverse .od-wds-content {
   order: 1;
 }
 
 /* ---- Image ---- */
-.br-wds-image img {
+.od-wds-image img {
   width: 100%;
   height: auto;
   display: block;
 }
 
 /* ---- Content ---- */
-.br-wds-number {
+.od-wds-number {
   color: #9a9a9a;
   font-size: 12px;
   font-weight: 600;
@@ -193,30 +189,30 @@
   margin-bottom: 8px;
 }
 
-.br-wds-title {
+.od-wds-title {
   color: #111;
   font-size: 36px;
   font-weight: 700;
   margin: 0 0 12px;
 }
-.br-wds-desc {
+.od-wds-desc {
     color: #000000;
     margin: 0px 0px 33px;
     font-size: 28px;
     line-height: 1.6;
 }
-.br-fp-section {
+.od-fp-section {
   background: #121212;
   padding: 96px 24px;
 }
 
-.br-fp-container2 {
+.od-fp-container2 {
   max-width: 1595px;
   margin: 0 auto;
 }
 
 /* ---- Eyebrow ---- */
-.br-fp-eyebrow {
+.od-fp-eyebrow {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -227,7 +223,7 @@
   margin: 0 0 20px;
 }
 
-.br-fp-eyebrow-line {
+.od-fp-eyebrow-line {
   display: inline-block;
   width: 28px;
   height: 2px;
@@ -235,7 +231,7 @@
 }
 
 /* ---- Heading row with View More ---- */
-.br-fp-heading-row {
+.od-fp-heading-row {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
@@ -243,7 +239,7 @@
   margin-bottom: 48px;
 }
 
-.br-fp-heading {
+.od-fp-heading {
   color: #fff;
   font-size: 56px;
   font-weight: 700;
@@ -252,7 +248,7 @@
   margin: 0;
 }
 
-.br-fp-view-more {
+.od-fp-view-more {
   color: #f0128c;
   font-size: 13px;
   font-weight: 700;
@@ -266,35 +262,35 @@
   transition: opacity 0.2s ease;
 }
 
-.br-fp-view-more:hover {
+.od-fp-view-more:hover {
   opacity: 0.75;
 }
 
 /* ---- Cards grid: first card is wider ---- */
-.br-fp-grid {
+.od-fp-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   gap: 24px;
   transition: grid-template-columns 0.45s ease;
 }
 
-.br-fp-grid:hover {
+.od-fp-grid:hover {
   grid-template-columns: 1fr 1fr 1fr;
 }
 
-.br-fp-grid:has(.br-fp-card:nth-child(1):hover) {
+.od-fp-grid:has(.od-fp-card:nth-child(1):hover) {
   grid-template-columns: 2fr 1fr 1fr;
 }
 
-.br-fp-grid:has(.br-fp-card:nth-child(2):hover) {
+.od-fp-grid:has(.od-fp-card:nth-child(2):hover) {
   grid-template-columns: 1fr 2fr 1fr;
 }
 
-.br-fp-grid:has(.br-fp-card:nth-child(3):hover) {
+.od-fp-grid:has(.od-fp-card:nth-child(3):hover) {
   grid-template-columns: 1fr 1fr 2fr;
 }
 
-.br-fp-card {
+.od-fp-card {
   position: relative;
   border-radius: 10px;
   overflow: hidden;
@@ -303,7 +299,7 @@
   transition: min-height 0.3s ease;
 }
 
-.br-fp-card-image {
+.od-fp-card-image {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -313,12 +309,12 @@
   transition: transform 0.4s ease;
 }
 
-.br-fp-card:hover .br-fp-card-image {
+.od-fp-card:hover .od-fp-card-image {
   transform: scale(1.04);
 }
 
 /* ---- Text overlay at the bottom of each card ---- */
-.br-fp-card-overlay {
+.od-fp-card-overlay {
   position: absolute;
   left: 0;
   right: 0;
@@ -332,7 +328,7 @@
   );
 }
 
-.br-fp-card-title {
+.od-fp-card-title {
   color: #fff;
   font-size: 13px;
   font-weight: 700;
@@ -342,7 +338,7 @@
   text-transform: uppercase;
 }
 
-.br-fp-card-link {
+.od-fp-card-link {
   color: #fff;
   font-size: 15px;
   font-weight: 700;
@@ -355,42 +351,42 @@
   transition: border-color 0.2s ease;
 }
 
-.br-fp-card-link:hover {
+.od-fp-card-link:hover {
   border-color: #f0128c;
 }
 
-.br-fp-arrow {
+.od-fp-arrow {
   display: inline-block;
 }
-.br-gal-section {
+.od-gal-section {
   background: #fff;
   padding: 72px 0 96px;
 }
 
-/* .br-gal-container {
+.od-gal-container {
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
 /* ---- Heading row ---- */
-.br-gal-heading-row {
+.od-gal-heading-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 24px;
   margin-bottom: 40px;
+      margin-left: -198px;
 }
 
-.br-gal-heading {
+.od-gal-heading {
   color: #111;
   font-size: 34px;
   font-weight: 800;
   margin: 0;
-  margin-left: 151px;
 }
 
-.br-gal-view-more {
+.od-gal-view-more {
   color: #f0128c;
   font-size: 13px;
   font-weight: 700;
@@ -401,50 +397,131 @@
   align-items: center;
   gap: 8px;
   transition: opacity 0.2s ease;
-  margin-right: 102px;
 }
 
-.br-gal-view-more:hover {
+.od-gal-view-more:hover {
   opacity: 0.75;
 }
 
 /* ---- Image + overlay wrapper ---- */
-.br-gal-image-wrap {
+.od-gal-image-wrap {
   position: relative;
   width: 100%;
 }
 
-.br-gal-image {
+.od-gal-image {
   display: block;
   width: 100%;
-      height: 816px;
+     height: auto;
 }
 
+/* ---- Text labels on the tags ----
+   Adjust the left/top % below to fine-tune each label's position.
+   Font sizes use vw so the text scales with the image. */
+.od-gal-tag-label {
+  position: absolute;
+  top: 16.5%;
+  color: #fff;
+  pointer-events: none;
+}
 
+.od-gal-tag-1 {
+  left: 6.5%;
+    top: 41%;
+}
 
-.br-gal-vip-5 {
+.od-gal-tag-2 {
+  left: 25%;
+    top: 42%;
+}
+
+.od-gal-tag-3 {
+ top: 42%;
+    left: 43%;
+}
+
+.od-gal-tag-4 {
+ top: 42%;
+    left: 61.1%;
+}
+
+.od-gal-tag-5 {
+     top: 42%;
+    left: 80%;
+}
+
+.od-gal-tag-category {
+  font-size: 0.62vw;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  opacity: 0.8;
+  margin: 0 0 0.25vw;
+  white-space: nowrap;
+}
+
+.od-gal-tag-title {
+  font-size: 0.95vw;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.od-gal-vip-label {
+  /* color: #111; */
+    letter-spacing: .12em;
+    white-space: nowrap;
+    pointer-events: none;
+    font-size: 0.80vw;
+    font-weight: 400;
+    position: absolute;
+    top: 84.2%;
+}
+
+.od-gal-vip-1 {
+ left: 10.7%;
+ color:#A5113C;
+}
+
+.od-gal-vip-2 {
+ left: 29.1%;
+  color:#43196B;
+}
+
+.od-gal-vip-3 {
+ left: 47.3%;
+  color:#D55E00;
+}
+
+.od-gal-vip-4 {
+  left: 65.7%;
+  color:#004243;
+
+}
+
+.od-gal-vip-5 {
   left: 84.3%;
   color:#D41153;
 }
-.br-git-section {
+.od-git-section {
   background: #fafafa;
   padding: 80px 24px 96px;
 }
 
-.br-git-container {
+.od-git-container {
   max-width: 1501px;
   margin: 0 auto;
 }
 
 /* ---- Logo + headings ---- */
-.br-git-logo {
+.od-git-logo {
   display: block;
   width: 120px;
   height: auto;
   margin: 0 auto 28px;
 }
 
-.br-git-tagline {
+.od-git-tagline {
   color: #111;
   font-size: 42px;
   font-weight: 700;
@@ -454,7 +531,7 @@
   margin: 0 0 56px;
 }
 
-.br-git-eyebrow {
+.od-git-eyebrow {
   color: #111;
   font-size: 13px;
   font-weight: 700;
@@ -464,7 +541,7 @@
   font-family: var(--font-body);
 }
 
-.br-git-heading {
+.od-git-heading {
   color: #111;
   font-size: 40px;
   font-weight: 700;
@@ -473,7 +550,7 @@
 }
 
 /* ---- Two-column layout ---- */
-.br-git-grid {
+.od-git-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
@@ -481,33 +558,33 @@
 }
 
 /* ---- Form ---- */
-.br-git-form {
+.od-git-form {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.br-git-row {
+.od-git-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
 }
 
-.br-git-field {
+.od-git-field {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
-.br-git-field label {
+.od-git-field label {
   color: #333;
   font-size: 14px;
   font-weight: 600;
 }
 
-.br-git-field input,
-.br-git-field select,
-.br-git-field textarea {
+.od-git-field input,
+.od-git-field select,
+.od-git-field textarea {
   background: #e2e4f8;
   border: none;
   border-radius: 6px;
@@ -520,18 +597,18 @@
   transition: box-shadow 0.2s ease;
 }
 
-.br-git-field input::placeholder,
-.br-git-field textarea::placeholder {
+.od-git-field input::placeholder,
+.od-git-field textarea::placeholder {
   color: #8a8fa8;
 }
 
-.br-git-field input:focus,
-.br-git-field select:focus,
-.br-git-field textarea:focus {
+.od-git-field input:focus,
+.od-git-field select:focus,
+.od-git-field textarea:focus {
   box-shadow: 0 0 0 2px #b39ddb;
 }
 
-.br-git-field select {
+.od-git-field select {
   appearance: none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23555' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
@@ -539,13 +616,13 @@
   cursor: pointer;
 }
 
-.br-git-field textarea {
+.od-git-field textarea {
   resize: vertical;
   min-height: 120px;
 }
 
 /* ---- Submit button ---- */
-.br-git-submit {
+.od-git-submit {
   background: linear-gradient(90deg, #f0128c 0%, #8b23c9 100%);
   color: #fff;
   border: none;
@@ -562,28 +639,28 @@
   transition: opacity 0.2s ease, transform 0.15s ease;
 }
 
-.br-git-submit:hover {
+.od-git-submit:hover {
   opacity: 0.92;
 }
 
-.br-git-submit:active {
+.od-git-submit:active {
   transform: scale(0.99);
 }
 
-.br-git-submit-icon {
+.od-git-submit-icon {
   font-size: 14px;
 }
 
 /* ---- Right image ---- */
-.br-git-image {
+.od-git-image {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
   min-height: 100%;
 }
 
-.br-git-image img,
-.br-git-image video {
+.od-git-image img,
+.od-git-image video {
   object-fit: cover;
   width: 100%;
   height: 100%;
@@ -591,116 +668,40 @@
   position: absolute;
   inset: 0;
 }
-.fw-section {
-  position: relative;
-  overflow: hidden;
-  padding: 90px 24px;
-  min-height: 520px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.fw-bg-image {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
- object-fit: fill;
-  z-index: 0;
-}
-
-/* ---- Row of frames ---- */
-.fw-row {
-    z-index: 1;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 124px;
-    width: 100%;
-    max-width: 2987px;
-    display: flex;
-    position: relative;
-}
-/* ---- The white frame / mat around each photo ---- */
-.fw-frame {
-    background: #f7f7f2;
-    border-radius: 2px;
-    flex: 331px;
-    max-width: 424px;
-    padding: 14px;
-    box-shadow: 0 22px 45px #0006;
-}
-
-/* ---- Image window: overflow hidden clips the zoom ---- */
-.fw-image {
-  position: relative;
-  overflow: hidden;
-  aspect-ratio: 3 / 4; /* portrait frame — change to taste */
-}
-
-.fw-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  /* transition drives BOTH the zoom-in and the zoom-out */
-  transition: transform 0.6s ease;
-}
-
-/* zoom in on hover; leaving the frame animates it back out */
-.fw-frame:hover .fw-image img {
-  transform: scale(1.12);
-}
-
-/* ---- Responsive: stack frames on small screens ---- */
-@media (max-width: 768px) {
-  .fw-section {
-    padding: 60px 20px;
-    min-height: 0;
-  }
-
-  .fw-row {
-    gap: 28px;
-  }
-
-  .fw-frame {
-    flex: 1 1 100%;
-    max-width: 420px;
-  }
-}
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
-  .br-git-grid {
+  .od-git-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  .br-git-image {
+  .od-git-image {
     order: -1; /* image above the form when stacked */
     min-height: 320px;
     max-height: 380px;
   }
 
-  .br-git-tagline {
+  .od-git-tagline {
     font-size: 32px;
   }
 
-  .br-git-heading {
+  .od-git-heading {
     font-size: 32px;
     margin-bottom: 40px;
   }
 }
 
 @media (max-width: 560px) {
-  .br-git-section {
+  .od-git-section {
     padding: 64px 20px;
   }
 
-  .br-git-row {
+  .od-git-row {
     grid-template-columns: 1fr;
   }
 
-  .br-git-tagline {
+  .od-git-tagline {
     font-size: 26px;
   }
 }
@@ -708,63 +709,63 @@
 /* ---- Responsive ---- */
 @media (max-width: 640px) {
 
-   .br-gal-section {
+   .od-gal-section {
         padding: 26px 0 21px;
     }
   
 
-  .br-gal-heading {
+  .od-gal-heading {
     font-size: 28px;
   }
 
   /* on small screens vw text gets too tiny to read;
      bump it slightly — tweak or remove as you prefer */
-  .br-gal-tag-category {
+  .od-gal-tag-category {
     font-size: 1vw;
   }
 
-  .br-gal-tag-title {
+  .od-gal-tag-title {
     font-size: 1.5vw;
   }
 
-  .br-gal-vip-label {
+  .od-gal-vip-label {
     font-size: 1vw;
   }
 }
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
-  .br-fp-grid {
+  .od-fp-grid {
     grid-template-columns: 1fr 1fr;
   }
 
   /* wide card spans the full row when 2 columns */
-  .br-fp-card:first-child {
+  .od-fp-card:first-child {
     grid-column: 1 / -1;
   }
 
-  .br-fp-heading {
+  .od-fp-heading {
     font-size: 40px;
   }
 }
 
 @media (max-width: 560px) {
-  .br-fp-section {
+  .od-fp-section {
     padding: 64px 20px;
   }
 
-  .br-fp-grid {
+  .od-fp-grid {
     grid-template-columns: 1fr;
   }
 
-  .br-fp-card:first-child {
+  .od-fp-card:first-child {
     grid-column: auto;
   }
 
-  .br-fp-heading {
+  .od-fp-heading {
     font-size: 32px;
   }
 
-  .br-fp-heading-row {
+  .od-fp-heading-row {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
@@ -772,18 +773,18 @@
 }
 /* ---- Responsive ---- */
 @media (max-width: 768px) {
-  .br-wds-item {
+  .od-wds-item {
     grid-template-columns: 1fr;
     gap: 24px;
     margin-bottom: 64px;
   }
-  .br-git-logo {
+  .od-git-logo {
     width: 89px;
     height: auto;
     margin: 0 auto 28px;
     display: block;
 }
-.br-wds-desc {
+.od-wds-desc {
     color: #6a6a6a;
     margin: 0;
     font-size: 17px;
@@ -791,18 +792,18 @@
 }
 
   /* when stacked, image always on top */
-  .br-wds-item-reverse .br-wds-image {
+  .od-wds-item-reverse .od-wds-image {
     order: 1;
   }
 
-  .br-wds-item-reverse .br-wds-content {
+  .od-wds-item-reverse .od-wds-content {
     order: 2;
   }
 
-  .br-wds-desc {
+  .od-wds-desc {
     max-width: none;
   }
-  .br-gal-image {
+  .od-gal-image {
     width: 100%;
     height: 213px;
     display: block;
@@ -810,55 +811,55 @@
 }
 
 @media (max-width: 480px) {
-  .br-wds-section {
+  .od-wds-section {
     padding: 56px 20px 72px;
   }
 
-  .br-wds-heading {
+  .od-wds-heading {
     font-size: 26px;
     margin-bottom: 36px;
   }
 
-  .br-wds-title {
+  .od-wds-title {
     font-size: 22px;
   }
 }
 /* ---- Responsive ---- */
 @media (max-width: 900px) {
-  .br-eh-heading {
+  .od-eh-heading {
     font-size: 34px;
   }
 
-  .br-eh-banner-title {
+  .od-eh-banner-title {
     font-size: 32px;
   }
 
-  .br-eh-banner-overlay {
+  .od-eh-banner-overlay {
     padding: 28px 24px;
   }
 }
 
 @media (max-width: 480px) {
-  .br-eh-section {
+  .od-eh-section {
     padding: 56px 20px 72px;
   }
 
-  .br-eh-heading {
+  .od-eh-heading {
     font-size: 26px;
     margin-bottom: 36px;
   }
 
-  .br-eh-banner {
+  .od-eh-banner {
     height: auto;
     aspect-ratio: 76 / 35;
     border-radius: 14px;
   }
 
-  .br-eh-banner-title {
+  .od-eh-banner-title {
     font-size: 26px;
   }
 
-  .br-eh-banner-subtitle {
+  .od-eh-banner-subtitle {
     font-size: 13px;
   }
 }
