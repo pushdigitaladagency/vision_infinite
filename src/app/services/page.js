@@ -62,6 +62,7 @@ const categories = [
   },
   {
     title: "BTL Activations",
+    href: "/services/btl-activations",
     bgClass: "category-card-btl",
     image: "/Images/sky.webp",
     tags: [
@@ -73,6 +74,7 @@ const categories = [
   },
   {
     title: "Branding Solutions",
+    href: "/services/branding",
     bgClass: "category-card-branding",
     image: "/Images/pink.webp",
     tags: [

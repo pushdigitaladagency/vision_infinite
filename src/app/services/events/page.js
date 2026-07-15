@@ -1,9 +1,100 @@
 "use client";
 
-import Image from "next/image";
+import { useEffect, useRef } from "react";
 import "./events.css";
 
+const loadWdsScript = (src) =>
+  new Promise((resolve, reject) => {
+    const existingScript = document.querySelector(`script[src="${src}"]`);
+
+    if (existingScript) {
+      if (existingScript.dataset.loaded === "true") {
+        resolve();
+        return;
+      }
+
+      existingScript.addEventListener("load", resolve, { once: true });
+      existingScript.addEventListener("error", reject, { once: true });
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = src;
+    script.async = true;
+    script.dataset.loaded = "false";
+    script.addEventListener("load", () => {
+      script.dataset.loaded = "true";
+      resolve();
+    });
+    script.addEventListener("error", reject);
+    document.head.appendChild(script);
+  });
+
 export default function EventsHero() {
+  const wdsContainerRef = useRef(null);
+
+  useEffect(() => {
+    let isCancelled = false;
+    let scrollTriggers = [];
+    let refreshFrame;
+
+    const setupWdsScroll = async () => {
+      await loadWdsScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js");
+      await loadWdsScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js");
+
+      if (isCancelled || !wdsContainerRef.current || !window.gsap || !window.ScrollTrigger) {
+        return;
+      }
+
+      const gsap = window.gsap;
+      const ScrollTrigger = window.ScrollTrigger;
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      const panels = Array.from(
+        wdsContainerRef.current.querySelectorAll(".wds-item")
+      );
+
+      if (panels.length < 2) {
+        return;
+      }
+
+      panels.forEach((panel) => {
+        panel.style.removeProperty("z-index");
+      });
+
+      const lastPinnedIndex = panels.length - 2;
+      const pins = panels
+        .slice(0, panels.length - 1)
+        .map((panel, index) =>
+          ScrollTrigger.create({
+            trigger: panel,
+            start: "top top",
+            end: () => `+=${window.innerHeight}`,
+            pin: true,
+            pinSpacing: false,
+            invalidateOnRefresh: true,
+            anticipatePin: index < lastPinnedIndex ? 1 : 0,
+          })
+        );
+
+      scrollTriggers = [...pins];
+      refreshFrame = requestAnimationFrame(() => {
+        if (!isCancelled) {
+          ScrollTrigger.refresh();
+        }
+      });
+    };
+
+    setupWdsScroll();
+
+    return () => {
+      isCancelled = true;
+      cancelAnimationFrame(refreshFrame);
+      scrollTriggers.forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
   return (
     <>
     <section className="eh-section">
@@ -29,7 +120,7 @@ export default function EventsHero() {
       </div>
     </section>
     <section className="wds-section">
-      <div className="wds-container">
+      <div className="wds-container" ref={wdsContainerRef}>
         <h2 className="wds-heading">What We Do</h2>
  
         {/* ---- 01 : image left, text right ---- */}
@@ -38,17 +129,19 @@ export default function EventsHero() {
             <img src="/Images/stage-1.webp" alt="Corporate Events" />
           </div>
           <div className="wds-content">
-            <span className="wds-number">01</span>
-            <h3 className="wds-title">Corporate Events</h3>
-            <p className="wds-desc">
-              Conferences, town halls and dealer meets — staged, lit
-and produced end to end.
+            <span className="wds-number" id="Corporate">01</span>
+            <h3 className="wds-title" id="Corporate">Corporate Events</h3>
+            <p className="wds-desc" id="Corporate">
+            Professional Conference Management That Inspires Collaboration.         
+            </p>
+            <p className="successful"id="Corporate">
+              A successful conference is more than a gathering -it's an opportunity to exchange ideas, strengthen relationships, and create meaningful business connections. We specialize in planning and executing professional conferences that reflect your organization's vision while ensuring a seamless experience for speakers, delegates, and attendees.
             </p>
           </div>
         </div>
  
         {/* ---- 02 : text left, image right ---- */}
-        <div className="wds-item wds-item-reverse">
+        <div className="wds-item wds-item-reverse wds-panel-product-launches">
           <div className="wds-image">
             <img src="/Images/stage-2.webp" alt="Product Launches" />
           </div>
@@ -56,14 +149,16 @@ and produced end to end.
             <span className="wds-number">02</span>
             <h3 className="wds-title">Product Launches</h3>
             <p className="wds-desc">
-              High-impact reveals built around giant LED walls and
-immersive moments.
+             Launch Your Product with Maximum Impact.
             </p>
+            
+            <p className="successful">A product launch is your brand's opportunity to make a memorable first impression. We design high-impact launch events that build excitement, generate media attention, engage customers, and position your product for success.</p>
+          <p className="successful">Whether you're introducing a new product, unveiling a service, or entering a new market, our team creates immersive launch experiences that combine creativity, technology, and strategic event planning to ensure your message reaches the right audience.</p>
           </div>
         </div>
  
         {/* ---- 03 : image left, text right ---- */}
-        <div className="wds-item">
+        <div className="wds-item wds-panel-awards-night">
           <div className="wds-image">
             <img src="/Images/stage-3.webp" alt="Awards Ceremonies" />
           </div>
@@ -71,9 +166,11 @@ immersive moments.
             <span className="wds-number">03</span>
             <h3 className="wds-title">Awards Night</h3>
             <p className="wds-desc">
-             Glamorous ceremonies with show flow, stage design
-and full execution.
+             Create Unforgettable Live Entertainment Experiences.
             </p>
+            <p className="successful">Mini concerts are an exciting way to connect audiences with your brand through music, entertainment, and live performances. Whether organized for corporate celebrations, product launches, festivals, college events, shopping malls, or public gatherings, our concerts are designed to captivate audiences and create lasting impressions.</p>
+            <p className="successful-2" >Our experienced team handles artist coordination, technical production, stage design, audience management, and event logistics to ensure every performance is memorable.</p>
+
           </div>
         </div>
  
@@ -86,9 +183,10 @@ and full execution.
             <span className="wds-number">04</span>
             <h3 className="wds-title">Mini Concerts</h3>
             <p className="wds-desc">
-             Intimate live stages with sound, lighting and crowd-
-ready production.
+             Celebrate Excellence with Memorable Award Events.
             </p>
+            <p className="successful">Awards ceremonies recognize achievements, inspire excellence, and strengthen organizational culture. We create elegant and professionally managed award events that celebrate success while delivering a premium experience for nominees, winners, guests, and stakeholders.</p>
+            <p className="successful-2">Our team combines creative stage production, engaging presentations, and meticulous event coordination to deliver ceremonies that leave lasting memories.</p>
           </div>
         </div>
       </div>
