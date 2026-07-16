@@ -99,7 +99,7 @@ export default function EventsHero() {
     <>
     <section className="eh-section">
       <div className="eh-container">
-        <p className="eh-eyebrow">THEATRE BRANDING</p>
+        <p className="eh-eyebrow">EVENTS</p>
 
         <h2 className="eh-heading">
           Extraordinary events, crafted for
