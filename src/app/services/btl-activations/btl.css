@@ -159,6 +159,14 @@
   z-index: 0;
 }
 
+.btl-wds-panel > .btl-wds-heading {
+  left: max(72px, calc((100vw - 1580px) / 2 + 72px));
+  margin: 0;
+  position: absolute;
+  top: 56px;
+  z-index: 2;
+}
+
 .btl-wds-image,
 .btl-wds-content {
   position: relative;
@@ -903,15 +911,15 @@
 }
 .btl-wds-title {
         font-size: 17px;
+      
     }
     .btl-wds-desc {
-    /* color: #fffbfb; */
-    margin: 0;
-    font-size: 14px;
-    font-weight: 100;
-    line-height: 1.9;
-    text-align: justify;
-}
+        text-align: justify;
+        /* margin: 0; */
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.9;
+    }
 .btl-git-section {
         padding: 43px 20px;
     }
@@ -925,5 +933,47 @@
   .btl-wds-section {
     background: #fff;
             padding: 2px 43px 16px;
+}
+.btl-wds-detail {
+    color: #020202;
+    margin: 0 0 20px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 2;
+    text-align: justify;
+}
+}
+
+@media (min-width: 1280px)and (max-width: 1700px) {
+ .btl-wds-panel {
+    gap: 96px;
+    padding-left: 96px;
+    padding-right: 96px;
+}
+.btl-wds-image,
+.btl-wds-content {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.btl-wds-content {
+    width: min(760px, 100%);
+}
+ .btl-eh-section {
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+    background: #fafafa;
+    padding: 144px 135px 96px;
+    position: relative;
+    overflow: hidden;
+    transform: none;
+}
+/* .btl-git-section {
+    background: #fafafa;
+    padding: 80px 135px 96px;
+} */
+.btl-git-section {
+    background: #fafafa;
+    padding: 80px 135px 96px;
 }
 }

@@ -121,10 +121,9 @@ export default function EventsHero() {
     </section>
     <section className="od-wds-section">
       <div className="od-wds-container" ref={wdsContainerRef}>
-        <h2 className="od-wds-heading">What We Do</h2>
- 
         {/* ---- 01 : image left, text right ---- */}
         <div className="od-wds-item">
+          <h2 className="od-wds-heading">What We Do</h2>
           <div className="od-wds-image">
             <img src="/Images/vcare.webp" alt="Corporate Events" />
           </div>

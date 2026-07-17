@@ -40,7 +40,7 @@
 /* ---- Banner image with overlay ---- */
 .ev-eh-banner {
   position: relative;
- width: min(100%, 1423px);
+width: min(100%, 1503px);
     height: 543px;
   margin: 0 auto;
   border-radius: 20px;
@@ -81,35 +81,69 @@
   margin: 0;
 }
 .ev-wds-section {
-  background: #171717;
-  padding: 72px 24px 96px;
+  background: #5F5DCB;
+  padding: 0 24px 2px;
 }
 
 .ev-wds-container {
-  max-width: 1580px;
-  margin: 0px auto 0px 189px;
+  background: transparent;
+  isolation: isolate;
+  margin: 0;
+  max-width: none;
+  overflow: visible;
+  position: relative;
+  width: 100%;
 }
 
 /* ---- Heading ---- */
 .ev-wds-heading {
-  color: #fffbfb;
+  color: #000;
   font-size: 32px;
   font-weight: 800;
   letter-spacing: -0.01em;
- margin: 0 72px 48px;
+  margin: 0 0 24px;
 }
 
 /* ---- Alternating items ---- */
 .ev-wds-item {
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 56px;
   align-items: center;
-  margin-bottom: 48px;
+  gap: 160px;
+  height: 100vh;
+  margin-bottom: 0;
+  margin-left: calc(50% - 50vw);
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 56px max(72px, calc((100vw - 1580px) / 2 + 72px));
+  position: relative;
+  width: 100vw;
+  z-index: 0;
 }
 
 .ev-wds-item:last-child {
   margin-bottom: 0;
+}
+
+.ev-wds-panel-1 {
+  background-color: #5F5DCB;
+}
+
+.ev-wds-panel-2 {
+  background-color: #B3D43E;
+}
+
+.ev-wds-panel-3 {
+  background-color: #6CC8FF;
+}
+
+.ev-wds-panel-4 {
+  background-color: #FFBEF9;
+}
+
+.ev-wds-panel-5 {
+  background-color: #FFFCAC;
 }
 
 /* even blocks flip: text left, image right */
@@ -130,7 +164,7 @@
 
 /* ---- Content ---- */
 .ev-wds-number {
-  color: #9a9a9a;
+  color: #000;
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 0.1em;
@@ -139,14 +173,14 @@
 }
 
 .ev-wds-title {
-  color: #faf7f7;
+  color: #000;
   font-size: 36px;
   font-weight: 700;
   margin: 0 0 12px;
 }
 
 .ev-wds-desc {
- color: #fffbfb;
+ color: #000;
   font-size: 22px;
   line-height: 1.9;
   margin: 0;
@@ -743,9 +777,9 @@
 }
 
 @media (max-width: 480px) {
-  .ev-wds-section {
-    padding: 56px 20px 72px;
-  }
+ .ev-wds-section {
+        padding: 53px 20px 0px;
+    }
 
   .ev-wds-heading {
     font-size: 26px;
@@ -796,16 +830,23 @@
   }
 }
 @media screen and (max-width: 768px){
-  .ev-wds-image img {
-    width: 97%;
-    height: 320px;
-    display: block;
-}
+     .ev-wds-item {
+       align-content: start;
+       gap: 8px;
+       row-gap: 90px;
+       padding: 0 36px;
+    }
+     .ev-wds-image img {
+        width: 110%;
+        height: 257px;
+        display: block;
+        margin-top: 32px;
+    }
 .ev-wds-title {
         font-size: 17px;
     }
     .ev-wds-desc {
-    color: #fffbfb;
+    color: #000;
     margin: 0;
     font-size: 14px;
     font-weight: 100;
@@ -818,18 +859,20 @@
   
 }
 @media (min-width: 1280px)and (max-width: 1700px) {
+
 .ev-wds-container {
-    max-width: 1580px;
-    margin: 0 auto 0 52px;
+    max-width: none;
+    margin: 0;
+    width: 100%;
 }
 .ev-wds-title {
-    color: #faf7f7;
+    color: #000;
     margin: 0 0 12px;
     font-size: 34px;
     font-weight: 700;
 }
 .ev-wds-desc {
-    color: #fffbfb;
+    color: #000;
     margin: 0;
     font-size: 19px;
     font-weight: 100;
@@ -842,18 +885,29 @@
 .ev-wds-item {
     grid-template-columns: 1fr 1fr;
     align-items: center;
-    gap: 56px;
+    gap: 96px;
     margin-bottom: 48px;
     display: grid;
+    padding-left: 96px;
+    padding-right: 96px;
    
 }
+.ev-wds-image,
+.ev-wds-content {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.ev-wds-content {
+    width: min(760px, 100%);
+}
  .ev-wds-container {
-    max-width: 1515px;
-    margin: 0 auto 0 61px;
+    max-width: none;
+    margin: 0;
+    width: 100%;
 }
 .ev-wds-section {
-    background: #171717;
-    padding: 72px 96px 96px;
+    background: transparent;
+    padding: 0;
 }
 .ev-fp-section {
     background: #121212;
@@ -863,4 +917,10 @@
     background: #fafafa;
     padding: 80px 123px 96px;
 }
+}
+
+.ev-wds-panel-1 .ev-wds-content .ev-wds-number,
+.ev-wds-panel-1 .ev-wds-content .ev-wds-title,
+.ev-wds-panel-1 .ev-wds-content .ev-wds-desc {
+  color: #fff;
 }

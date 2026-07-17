@@ -190,7 +190,7 @@ export default function EventsHero() {
         </h2>
 
         <div className="btl-eh-banner">
-          <img src="/Images/BTL.webp" alt="Events" />
+          <img src="/Images/btl-activation.png" alt="Events" />
 
           <div className="btl-eh-banner-overlay">
             <h3 className="btl-eh-banner-title">Events</h3>
@@ -202,18 +202,12 @@ export default function EventsHero() {
       </div>
     </section>
 
-    {/* ---- What We Do: heading stays on white, panels stack below ---- */}
-    <section className="btl-wds-section">
-      <div className="btl-wds-heading-wrap">
-        <h2 className="btl-wds-heading">What We Do</h2>
-      </div>
-    </section>
-
     {/* ---- Panels wrapper: panels are direct children, no padding/max-width constraints ---- */}
     <div className="wds-container btl-wds-container btl-wds-panels-wrap" ref={wdsContainerRef}>
 
       {/* ---- 01 : image left, text right ---- */}
       <div className="btl-wds-item btl-wds-panel btl-wds-panel-1">
+        <h2 className="btl-wds-heading">What We Do</h2>
         <div className="btl-wds-image">
           <img src="/Images/canter.webp" alt="Corporate Events" />
         </div>

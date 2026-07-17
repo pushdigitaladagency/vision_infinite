@@ -1,8 +1,100 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import "./theater.css";
 
+const loadWdsScript = (src) =>
+  new Promise((resolve, reject) => {
+    const existingScript = document.querySelector(`script[src="${src}"]`);
+
+    if (existingScript) {
+      if (existingScript.dataset.loaded === "true") {
+        resolve();
+        return;
+      }
+
+      existingScript.addEventListener("load", resolve, { once: true });
+      existingScript.addEventListener("error", reject, { once: true });
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = src;
+    script.async = true;
+    script.dataset.loaded = "false";
+    script.addEventListener("load", () => {
+      script.dataset.loaded = "true";
+      resolve();
+    });
+    script.addEventListener("error", reject);
+    document.head.appendChild(script);
+  });
+
 export default function EventsHero() {
+  const wdsContainerRef = useRef(null);
+
+  useEffect(() => {
+    let isCancelled = false;
+    let scrollTriggers = [];
+    let refreshFrame;
+
+    const setupWdsScroll = async () => {
+      await loadWdsScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js");
+      await loadWdsScript("https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js");
+
+      if (isCancelled || !wdsContainerRef.current || !window.gsap || !window.ScrollTrigger) {
+        return;
+      }
+
+      const gsap = window.gsap;
+      const ScrollTrigger = window.ScrollTrigger;
+
+      gsap.registerPlugin(ScrollTrigger);
+
+      const panels = Array.from(
+        wdsContainerRef.current.querySelectorAll(".ev-wds-item")
+      );
+
+      if (panels.length < 2) {
+        return;
+      }
+
+      panels.forEach((panel) => {
+        panel.style.removeProperty("z-index");
+      });
+
+      const lastPinnedIndex = panels.length - 2;
+      const pins = panels
+        .slice(0, panels.length - 1)
+        .map((panel, index) =>
+          ScrollTrigger.create({
+            trigger: panel,
+            start: "top top",
+            end: () => `+=${window.innerHeight}`,
+            pin: true,
+            pinSpacing: false,
+            invalidateOnRefresh: true,
+            anticipatePin: index < lastPinnedIndex ? 1 : 0,
+          })
+        );
+
+      scrollTriggers = [...pins];
+      refreshFrame = requestAnimationFrame(() => {
+        if (!isCancelled) {
+          ScrollTrigger.refresh();
+        }
+      });
+    };
+
+    setupWdsScroll();
+
+    return () => {
+      isCancelled = true;
+      cancelAnimationFrame(refreshFrame);
+      scrollTriggers.forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
   return (
     <>
     <section className="ev-eh-section">
@@ -28,13 +120,12 @@ export default function EventsHero() {
       </div>
     </section>
     <section className="ev-wds-section">
-      <div className="ev-wds-container">
-        <h2 className="ev-wds-heading">What We Do</h2>
- 
+      <div className="ev-wds-container" ref={wdsContainerRef}>
         {/* ---- 01 : image left, text right ---- */}
-        <div className="ev-wds-item">
+        <div className="ev-wds-item ev-wds-panel-1">
           <div className="ev-wds-image">
-            <img src="/Images/theater.webp" alt="Corporate Events" />
+            <h2 className="ev-wds-heading">What We Do</h2>
+            <img src="/Images/hall.webp" alt="Corporate Events" />
           </div>
           <div className="ev-wds-content">
             <span className="ev-wds-number">01</span>
@@ -46,7 +137,7 @@ export default function EventsHero() {
         </div>
  
         {/* ---- 02 : text left, image right ---- */}
-        <div className="ev-wds-item ev-wds-item-reverse">
+        <div className="ev-wds-item ev-wds-item-reverse ev-wds-panel-2">
           <div className="ev-wds-image">
             <img src="/Images/standee.webp" alt="Product Launches" />
           </div>
@@ -60,7 +151,7 @@ export default function EventsHero() {
         </div>
  
         {/* ---- 03 : image left, text right ---- */}
-        <div className="ev-wds-item">
+        <div className="ev-wds-item ev-wds-panel-3">
           <div className="ev-wds-image">
             <img src="/Images/counter.webp" alt="Awards Ceremonies" />
           </div>
@@ -73,7 +164,7 @@ export default function EventsHero() {
         </div>
  
         {/* ---- 04 : text left, image right ---- */}
-        <div className="ev-wds-item ev-wds-item-reverse">
+        <div className="ev-wds-item ev-wds-item-reverse ev-wds-panel-4">
           <div className="ev-wds-image">
             <img src="/Images/interior.webp" alt="Mini Concerts" />
           </div>
@@ -86,7 +177,7 @@ export default function EventsHero() {
           </div>
         </div>
         {/* ---- 05 : image left, text right ---- */}
-        <div className="ev-wds-item">
+        <div className="ev-wds-item ev-wds-panel-5">
           <div className="ev-wds-image">
             <img src="/Images/onscreen.webp" alt="Awards Ceremonies" />
           </div>

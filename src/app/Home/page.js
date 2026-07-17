@@ -65,6 +65,18 @@ const SERVICES = [
     ],
     image: "/Images/service-4.webp",
   },
+  {
+    title: "Outdoor Advertising",
+    description:
+      "From billboards to transit displays, we create strategic outdoor campaigns that put your brand where your audience sees it most.",
+    points: [
+      "Unipole center medians",
+      "Pole Kiosk",
+      "Hoardings",
+      
+    ],
+    image: "/Images/pocket.webp",
+  },
 ];
 const PROJECTS = [
   {

@@ -121,10 +121,9 @@ export default function EventsHero() {
     </section>
     <section className="br-wds-section">
       <div className="br-wds-container" ref={wdsContainerRef}>
-        <h2 className="br-wds-heading">What We Do</h2>
- 
         {/* ---- 01 : image left, text right ---- */}
         <div className="br-wds-item">
+          <h2 className="br-wds-heading">What We Do</h2>
           <div className="br-wds-image">
             <img src="/Images/croma-1.webp" alt="Corporate Events" />
           </div>
@@ -188,11 +187,11 @@ export default function EventsHero() {
           </div>
         </div>
           <div className="br-wds-item br-wds-item-reverse br-wds-panel-mini-concerts">
-          <div className="br-wds-image">
+          <div className="br-wds-image" id="span4">
             <img src="/Images/paper.webp" alt="Mini Concerts" />
           </div>
           <div className="br-wds-content">
-            <span className="br-wds-number">05</span>
+            <span className="br-wds-number" id="span5">05</span>
             <h3 className="br-wds-title">Wall Posters & Parking Boards</h3>
             <p className="br-wds-desc">
              Smart Branding Solutions for Everyday Visibility.

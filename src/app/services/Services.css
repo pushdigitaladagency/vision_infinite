@@ -837,7 +837,10 @@
     bottom: 37px;
     left: 41px;
   }
-
+.category-tag-branding-4 {
+    bottom: 5%;
+    right: -21%;
+}
   .orbit-card-7 {
     bottom: 0;
     left: 50%;
@@ -890,6 +893,7 @@
     width: 220px;
     height: 150px;
 }
+
 }
 
 @media (max-width: 420px) {
@@ -993,4 +997,19 @@
   .git-tagline {
     font-size: 26px;
   }
+}
+@media (min-width: 1280px)and (max-width: 1700px) {
+
+
+.git-section {
+    background: #fafafa;
+    padding: 80px 128px 96px;
+}
+.git-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    gap: 64px;
+    display: grid;
+    padding: 0px 138px;
+}
 }
