@@ -1,6 +1,6 @@
 .ab-section {
       background: #fff;
-    padding: 72px 99px 96px;
+    padding: 160px 99px 96px;
 }
 
 .ab-container {
@@ -11,7 +11,7 @@
 /* ---- Eyebrow ---- */
 .ab-eyebrow {
   color: #8a8a8a;
-  font-size: 12px;
+  font-size: 17px;
   font-weight: 600;
   letter-spacing: 0.3em;
   text-align: center;
@@ -81,7 +81,10 @@
     display: grid;
 }
 .ab-stat-number {
-  color: #b81588;
+  background: linear-gradient(180deg, #EC1F72 0%, #4D2FB8 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   font-size: 49px;
   font-weight: 800;
   margin: 0 0 8px;

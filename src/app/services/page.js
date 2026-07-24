@@ -418,14 +418,15 @@ export default function services() {
  
               <div className="git-field">
                 <label htmlFor="git-service">Services Wanted</label>
-                <select id="git-service" name="service" defaultValue="Events">
+                <select id="git-service" name="service" defaultValue="">
+                <option value="">Choose a service</option>
                   <option value="Events">Events</option>
                   <option value="Theatre Branding">Theatre Branding</option>
-                  <option value="Mall Activations">Mall Activations</option>
-                  <option value="Exhibition Pavilions">
-                    Exhibition Pavilions
+                  <option value="BTL Activations">BTL Activations</option>
+                  <option value="Branding Solutions">
+                    Branding Solutions
                   </option>
-                  <option value="Product Launches">Product Launches</option>
+                  <option value="Outdoor Advertising">Outdoor Advertising</option>
                 </select>
               </div>
             </div>

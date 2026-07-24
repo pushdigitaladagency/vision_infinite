@@ -913,16 +913,28 @@
         background: #fff;
         padding: 6px 6px;
     }
-.filmstrip-wrapper {
+  .filmstrip-section {
+    padding: 20px 0;
+  }
+  .filmstrip-wrapper {
     width: 100%;
-    padding: 30px 0;
-    overflow: hidden;
-}
-.film-frame {
-    width: 220px;
-    height: 150px;
-}
-
+    padding: 10px 0;
+    overflow: visible;
+  }
+  .filmstrip-track {
+    padding: 10px 0;
+  }
+  .sprocket-row {
+    padding: 6px 12px;
+  }
+  .sprocket-hole {
+    width: 10px;
+    height: 16px;
+  }
+  .film-frame {
+    width: 170px;
+    height: 110px;
+  }
 }
 
 @media (min-width: 769px) and (max-width: 1023px) {
