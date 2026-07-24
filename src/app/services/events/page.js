@@ -209,7 +209,7 @@ export default function EventsHero() {
             />
             <div className="fp-card-overlay">
               <h3 className="fp-card-title">MIRCHI AWARDS</h3>
-              <a href="/projects/mirchi-awards" className="fp-card-link">
+              <a href="/works" className="fp-card-link">
                 View case study <span className="fp-arrow">&rarr;</span>
               </a>
             </div>
@@ -224,7 +224,7 @@ export default function EventsHero() {
             />
             <div className="fp-card-overlay">
               <h3 className="fp-card-title">MUSIC CONCERT</h3>
-              <a href="/projects/music-concert" className="fp-card-link">
+              <a href="/works" className="fp-card-link">
                 View case study <span className="fp-arrow">&rarr;</span>
               </a>
             </div>
@@ -239,7 +239,7 @@ export default function EventsHero() {
             />
             <div className="fp-card-overlay">
               <h3 className="fp-card-title">V CARE OPENING CEREMONY</h3>
-              <a href="/projects/v-care-opening-ceremony" className="fp-card-link">
+              <a href="/works" className="fp-card-link">
                 View case study <span className="fp-arrow">&rarr;</span>
               </a>
             </div>

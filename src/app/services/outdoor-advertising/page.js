@@ -193,7 +193,7 @@ export default function EventsHero() {
             />
             <div className="od-fp-card-overlay">
               <h3 className="od-fp-card-title">mercely’s icecream hoarding </h3>
-              <a href="/projects/mirchi-awards" className="od-fp-card-link">
+              <a href="/works" className="od-fp-card-link">
                 View case study <span className="od-fp-arrow">&rarr;</span>
               </a>
             </div>
@@ -208,7 +208,7 @@ export default function EventsHero() {
             />
             <div className="od-fp-card-overlay">
               <h3 className="od-fp-card-title">anuj tiles hoarding</h3>
-              <a href="/projects/music-concert" className="od-fp-card-link">
+              <a href="/works" className="od-fp-card-link">
                 View case study <span className="od-fp-arrow">&rarr;</span>
               </a>
             </div>
@@ -223,7 +223,7 @@ export default function EventsHero() {
             />
             <div className="od-fp-card-overlay">
               <h3 className="od-fp-card-title">parkville pole kiosk</h3>
-              <a href="/projects/v-care-opening-ceremony" className="od-fp-card-link">
+              <a href="/works" className="od-fp-card-link">
                 View case study <span className="od-fp-arrow">&rarr;</span>
               </a>
             </div>

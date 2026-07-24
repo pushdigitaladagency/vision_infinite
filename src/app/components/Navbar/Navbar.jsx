@@ -24,6 +24,15 @@ export default function Navbar() {
     setMenuOpen(false);
   }, [pathname]);
 
+  const scrollToContactSection = () => {
+    const contactSection = document.querySelector(
+      "#contact, .git-section, .ev-git-section, .br-git-section, .od-git-section, .btl-git-section, .contact-hero"
+    );
+
+    contactSection?.scrollIntoView({ behavior: "smooth" });
+    return Boolean(contactSection);
+  };
+
   useEffect(() => {
     if (pathname !== "/" || sessionStorage.getItem("scrollToContact") !== "true") {
       return;
@@ -31,7 +40,7 @@ export default function Navbar() {
 
     sessionStorage.removeItem("scrollToContact");
     requestAnimationFrame(() => {
-      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+      scrollToContactSection();
     });
   }, [pathname]);
 
@@ -39,8 +48,7 @@ export default function Navbar() {
     event.preventDefault();
     setMenuOpen(false);
 
-    if (pathname === "/") {
-      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+    if (scrollToContactSection()) {
       return;
     }
 
@@ -52,7 +60,7 @@ export default function Navbar() {
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
-    // { label: "Our Works", href: "/works" },
+    { label: "Our Works", href: "/works" },
     { label: "Contact", href: "/contact" },
   ];
 
@@ -88,7 +96,7 @@ export default function Navbar() {
         </ul>
 
         {/* Desktop CTA */}
-        <Link href="/contact" className="nav-cta">
+        <Link href="/contact" className="nav-cta" onClick={handleContactClick}>
           Start a Project →
         </Link>
 

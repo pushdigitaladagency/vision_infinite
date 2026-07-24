@@ -221,7 +221,7 @@ export default function EventsHero() {
             />
             <div className="br-fp-card-overlay">
               <h3 className="br-fp-card-title">VASANTH & CO BRANDING</h3>
-              <a href="/projects/mirchi-awards" className="br-fp-card-link">
+              <a href="/works" className="br-fp-card-link">
                 View case study <span className="br-fp-arrow">&rarr;</span>
               </a>
             </div>
@@ -236,7 +236,7 @@ export default function EventsHero() {
             />
             <div className="br-fp-card-overlay">
               <h3 className="br-fp-card-title">NAIDU HALL BRANDING</h3>
-              <a href="/projects/music-concert" className="br-fp-card-link">
+              <a href="/works" className="br-fp-card-link">
                 View case study <span className="br-fp-arrow">&rarr;</span>
               </a>
             </div>
@@ -251,7 +251,7 @@ export default function EventsHero() {
             />
             <div className="br-fp-card-overlay">
               <h3 className="br-fp-card-title">MERCELY'S BRANDING – WALL POSTER</h3>
-              <a href="/projects/v-care-opening-ceremony" className="br-fp-card-link">
+              <a href="/works" className="br-fp-card-link">
                 View case study <span className="br-fp-arrow">&rarr;</span>
               </a>
             </div>

@@ -301,7 +301,7 @@ export default function EventsHero() {
             />
             <div className="btl-fp-card-overlay">
               <h3 className="btl-fp-card-title">V-care branding activities </h3>
-              <a href="/projects/mirchi-awards" className="btl-fp-card-link">
+              <a href="/works" className="btl-fp-card-link">
                 View case study <span className="btl-fp-arrow">&rarr;</span>
               </a>
             </div>
@@ -316,7 +316,7 @@ export default function EventsHero() {
             />
             <div className="btl-fp-card-overlay">
               <h3 className="btl-fp-card-title">CROMA CYCLE BRANDING</h3>
-              <a href="/projects/music-concert" className="btl-fp-card-link">
+              <a href="/works" className="btl-fp-card-link">
                 View case study <span className="btl-fp-arrow">&rarr;</span>
               </a>
             </div>
@@ -331,7 +331,7 @@ export default function EventsHero() {
             />
             <div className="btl-fp-card-overlay">
               <h3 className="btl-fp-card-title">CROMA LEAFLET DISTRIBUTION</h3>
-              <a href="/projects/v-care-opening-ceremony" className="btl-fp-card-link">
+              <a href="/works" className="btl-fp-card-link">
                 View case study <span className="btl-fp-arrow">&rarr;</span>
               </a>
             </div>

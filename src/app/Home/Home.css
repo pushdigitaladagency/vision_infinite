@@ -1310,7 +1310,7 @@ margin: 0 79px 72px
 .wwd-heading {
     color: #fff;
     letter-spacing: -.01em;
-    margin: 0px 28px 35px;
+    margin: 0 8px 35px;
     font-size: 18px;
     font-weight: 700;
     line-height: 1.15;
@@ -1321,7 +1321,7 @@ margin: 0 79px 72px
     letter-spacing: .25em;
     align-items: center;
     gap: 12px;
-    margin: 0 34px 24px;
+   margin: 0 8px 24px;
     font-size: 12px;
     font-weight: 700;
     display: flex;
@@ -1349,7 +1349,7 @@ margin: 0 79px 72px
     margin: 0 0 41px;
     font-size: 29px;
     font-weight: 700;
-    text-align: center;
+    text-align: left;
     width: 100%;
 }
 .wwd-service-desc {

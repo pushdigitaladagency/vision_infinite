@@ -18,10 +18,11 @@ const Footer = () => {
         <div className="footer-column">
           <h4 className="footer-heading">SERVICES</h4>
           <ul className="footer-links">
-            <li><a href="#">Theatre Branding</a></li>
-            <li><a href="#">BTL Activations</a></li>
-            <li><a href="#">Branding Solutions</a></li>
-            <li><a href="#">Events</a></li>
+            <li><a href="/services/theatre-branding">Theatre Branding</a></li>
+            <li><a href="/services/btl-activations">BTL Activations</a></li>
+            <li><a href="/services/branding">Branding Solutions</a></li>
+            <li><a href="/services/events">Events</a></li>
+            <li><a href="/services/outdoor-advertising">Outdoor Branding</a></li>
           </ul>
         </div>
 

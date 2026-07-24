@@ -804,7 +804,7 @@
     z-index: 1;
     position: absolute;
    top: 3px;
-    left: max(57px, 21vw - 718px);
+    left: max(-44px, 21vw - 718px);
 }
 .od-wds-image img {
         /* width: 100%; */

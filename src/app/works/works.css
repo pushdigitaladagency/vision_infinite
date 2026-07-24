@@ -1,101 +1,393 @@
-/* ===== WORKS PAGE ===== */
-.works-hero {
-  padding: 160px 48px 80px;
-  text-align: center;
-  background: var(--bg-secondary);
-  border-bottom: 1px solid var(--border-subtle);
+.pr-section {
+  background: #fff;
+  padding: 80px 24px 96px;
 }
 
-.works-hero h1 {
-  font-size: 56px;
-  font-weight: 900;
-  letter-spacing: -2px;
-  margin-bottom: 16px;
-}
-
-.works-hero p {
-  font-size: 18px;
-  color: var(--text-secondary);
-  max-width: 600px;
+.pr-container {
+  max-width: 1180px;
   margin: 0 auto;
-  line-height: 1.7;
 }
 
-.works-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-  margin-top: 48px;
+/* ---- Eyebrow ---- */
+.pr-eyebrow {
+  color: #6a6a6a;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-align: center;
+  margin: 0 0 18px;
+  text-transform: uppercase;
 }
 
-.work-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+/* ---- Heading ---- */
+.pr-heading {
+  color: #111;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin: 60px 0px 20px;
 }
 
-.work-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--border-light);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+.pr-subtitle {
+  color: #333;
+  font-size: 17px;
+  line-height: 1.6;
+  text-align: center;
+  margin: 0 0 40px;
 }
 
-.work-card-image {
-  height: 260px;
-  background: linear-gradient(135deg, #1a1a1a, #111);
+/* ---- Filter tabs ---- */
+.pr-filters {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  font-size: 56px;
-  opacity: 0.2;
-  border-bottom: 1px solid var(--border-subtle);
+  gap: 8px;
+  margin-bottom: 48px;
 }
 
-.work-card-body {
-  padding: 28px;
+.pr-filter {
+  background: transparent;
+  border: none;
+  border-radius: 999px;
+  color: #111;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 9px 18px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.pr-filter:hover {
+  background: #f2f2f2;
+}
+
+.pr-filter-active,
+.pr-filter-active:hover {
+  background: #f9c2e0;
+  color: #111;
+  letter-spacing: 0.06em;
+}
+
+.pr-filter:focus-visible {
+  outline: 2px solid #f0128c;
+  outline-offset: 2px;
+}
+
+/* ---- Grid ---- */
+.pr-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 26px;
+  row-gap: 40px;
+}
+
+/* ---- Card ---- */
+.pr-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.pr-card-image {
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 315 / 240;
+  margin-bottom: 16px;
+  background: #ededed;
+}
+
+.pr-card-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.pr-card:hover .pr-card-image img {
+  transform: scale(1.04);
+}
+
+.pr-card-meta {
+  color: #6a6a6a;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin: 0 0 8px;
+}
+
+.pr-card-dot {
+  margin: 0 2px;
+}
+
+.pr-card-title {
+  color: #111;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.pr-card:hover .pr-card-title {
+  color: #f0128c;
+}
+
+/* ---- Empty state ---- */
+.pr-empty {
+  color: #6a6a6a;
+  font-size: 15px;
+  text-align: center;
+  margin: 24px 0 0;
+}
+
+.git-section {
+  background: #fafafa;
+  padding: 80px 24px 96px;
+}
+
+.git-container {
+  max-width: 1501px;
+  margin: 0 auto;
+}
+
+.git-logo {
+  display: block;
+  width: 120px;
+  height: auto;
+  margin: 0 auto 28px;
+}
+
+.git-tagline {
+  color: #111;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-align: center;
+  margin: 0 0 56px;
+}
+
+.git-eyebrow {
+  color: #111;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-align: center;
+  margin: 0 0 12px;
+  font-family: var(--font-body);
+}
+
+.git-heading {
+  color: #111;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 56px;
+}
+
+.git-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: stretch;
+}
+
+.git-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 24px;
 }
 
-.work-tag {
-  display: inline-block;
-  font-size: 11px;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--accent-pink);
+.git-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.git-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.git-field label {
+  color: #333;
+  font-size: 14px;
   font-weight: 600;
 }
 
-.work-card-body h3 {
-  font-size: 20px;
+.git-field input,
+.git-field select,
+.git-field textarea {
+  background: #e2e4f8;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 16px;
+  font-size: 15px;
+  color: #333;
+  font-family: inherit;
+  width: 100%;
+  outline: none;
+  transition: box-shadow 0.2s ease;
+}
+
+.git-field input::placeholder,
+.git-field textarea::placeholder {
+  color: #8a8fa8;
+}
+
+.git-field input:focus,
+.git-field select:focus,
+.git-field textarea:focus {
+  box-shadow: 0 0 0 2px #b39ddb;
+}
+
+.git-field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23555' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  cursor: pointer;
+}
+
+.git-field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.git-submit {
+  background: linear-gradient(90deg, #f0128c 0%, #8b23c9 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 16px;
   font-weight: 700;
-  letter-spacing: -0.3px;
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: opacity 0.2s ease, transform 0.15s ease;
 }
 
-.work-card-body p {
-  font-size: 13px;
-  color: var(--text-secondary);
-  line-height: 1.7;
+.git-submit:hover {
+  opacity: 0.92;
 }
 
-.work-card-featured {
-  grid-column: span 2;
+.git-submit:active {
+  transform: scale(0.99);
 }
 
-.work-card-featured .work-card-image {
-  height: 360px;
+.git-submit-icon {
+  font-size: 14px;
 }
 
+.git-image {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.git-image img,
+.git-image video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  inset: 0;
+}
+
+/* ---- Responsive ---- */
 @media (max-width: 900px) {
-  .works-grid { grid-template-columns: 1fr; }
-  .work-card-featured { grid-column: span 1; }
-  .works-hero h1 { font-size: 40px; }
+  .pr-heading {
+    font-size: 48px;
+  }
+
+  .pr-grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 32px;
+  }
+
+  .git-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .git-image {
+    order: -1;
+    min-height: 320px;
+    max-height: 380px;
+  }
+
+  .git-tagline {
+    font-size: 32px;
+  }
+
+  .git-heading {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
 }
 
-@media (max-width: 600px) {
-  .works-hero { padding: 120px 20px 60px; }
-  .works-hero h1 { font-size: 32px; }
+@media (max-width: 560px) {
+  .pr-section {
+    padding: 56px 20px 72px;
+  }
+
+  .pr-heading {
+    font-size: 36px;
+  }
+
+  .pr-subtitle {
+    font-size: 15px;
+    margin-bottom: 32px;
+  }
+
+  .pr-filters {
+    gap: 6px;
+    margin-bottom: 36px;
+  }
+
+  .pr-filter {
+    font-size: 13px;
+    padding: 8px 14px;
+  }
+
+  .pr-grid {
+    grid-template-columns: 1fr;
+    row-gap: 28px;
+  }
+
+  .git-section {
+    padding: 64px 20px;
+  }
+
+  .git-row {
+    grid-template-columns: 1fr;
+  }
+
+  .git-tagline {
+    font-size: 26px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pr-card-image img {
+    transition: none;
+  }
+
+  .pr-card:hover .pr-card-image img {
+    transform: none;
+  }
 }

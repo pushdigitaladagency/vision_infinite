@@ -817,11 +817,11 @@
   }
 
 .wds-item > .wds-heading {
-    z-index: 1;
-    margin: 0;
-    position: absolute;
-    top: 14px;
-    left: max(115px, 50vw - 718px);
+            z-index: 1;
+        margin: 0;
+        position: absolute;
+        top: 14px;
+        left: max(34px, 50vw - 718px);
 }
 
   /* when stacked, image always on top */
