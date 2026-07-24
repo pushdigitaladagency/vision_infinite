@@ -93,7 +93,7 @@
 }
 .wds-section {
     background: #fff;
-    padding: 72px 24px 2px;
+    padding: 0px 24px 2px;
 }
 
 .wds-container {
@@ -160,15 +160,15 @@
 }
 
 .wds-item:nth-of-type(3) {
-  background: #6CC8FF;
+  background: #FFFCAC;
 }
 
 .wds-container .wds-item.wds-panel-awards-night {
-  background: #6CC8FF;
+  background: #FFFCAC;
 }
 
 .wds-item:nth-of-type(4) {
-  background: #FFFCAC;
+  background: #6CC8FF;
 }
 
 /* even blocks flip: text left, image right */
