@@ -189,12 +189,12 @@
 
 /* ---- Content ---- */
 .od-wds-number {
-  color: #9a9a9a;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  display: block;
-  margin-bottom: 8px;
+    color: #9a9a9a;
+    letter-spacing: .1em;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    display: block;
 }
 
 .od-wds-title {

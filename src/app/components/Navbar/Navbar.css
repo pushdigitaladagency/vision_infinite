@@ -168,7 +168,8 @@ width: 124px;
   }
 
   .nav-links.open {
-    right: 0;
+    right: -42px;
+    width: 299px;
   }
 
   .nav-links li {
@@ -232,7 +233,8 @@ width: 124px;
   }
 
   .nav-links.open {
-    right: 0;
+   right: -74px;
+   width: 366px;
   }
 
   .nav-links li {

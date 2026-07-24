@@ -772,3 +772,35 @@
   }
 
 }
+@media (max-width: 786px){
+.ab-text {
+    color: #444;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.75;
+     text-align: justify;
+}
+.ab-stat-label {
+    color: rgb(138, 138, 138);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0px;
+   
+}
+.hwt-intro {
+    color: rgb(207, 207, 207);
+    font-size: 15px;
+    line-height: 1.7;
+    margin: 0px 0px 48px;
+     text-align: justify;
+}
+.hwt-card-text {
+    color: #222;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+    text-align: justify;
+}
+}

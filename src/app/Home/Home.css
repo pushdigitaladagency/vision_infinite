@@ -1414,6 +1414,9 @@ margin: 0 79px 72px
         font-weight: 800;
         line-height: 1.15;
     }
+    .hww-heading br {
+        display: none;
+    }
     .hww-steps {
     /* grid-template-columns: repeat(6, 1fr); */
     gap: 32px;
@@ -1470,6 +1473,13 @@ margin: 0 79px 72px
     font-size: 12px;
     font-weight: 700;
     display: flex;
+}
+.tm-quote {
+    color: #f2f2f2;
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.65;
 }
 .tm-grid {
     /* grid-template-columns: repeat(3, 1fr); */
@@ -1594,6 +1604,7 @@ margin: 0 79px 72px
 
         gap: 40px 40px;
     }
+    
 }
 
 @media (min-width: 787px) and (max-width: 1279px) {
