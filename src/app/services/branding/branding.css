@@ -152,11 +152,11 @@
 }
 
 .br-wds-item:nth-of-type(2) {
-  background: #FFBEF9;
+  background: #B3D43E;
 }
 
 .br-wds-container .br-wds-item.br-wds-panel-product-launches {
-  background: #FFBEF9;
+  background: #B3D43E;
 }
 
 .br-wds-item:nth-of-type(3) {
@@ -168,7 +168,11 @@
 }
 
 .br-wds-item:nth-of-type(4) {
-  background: #FFFCAC;
+  background: #FFBEF9;
+}
+
+.br-wds-container .br-wds-item.br-wds-item-reverse:not(.br-wds-panel-product-launches):not(.br-wds-panel-mini-concerts) {
+  background: #FFBEF9 !important;
 }
 
 .br-wds-container .br-wds-item.br-wds-panel-mini-concerts {
@@ -923,6 +927,93 @@
 
   .br-eh-banner-subtitle {
     font-size: 13px;
+  }
+}
+
+@media (min-width: 787px) and (max-width: 1279px) {
+  .br-wds-item {
+    grid-template-columns: 1fr;
+    align-content: start;
+    gap: 8px;
+    row-gap: 8px;
+    height: 100vh;
+    min-height: 100vh;
+    padding: 0 64px;
+  }
+
+  .br-wds-item > .br-wds-heading {
+    top: 24px;
+    left: 64px;
+  }
+
+  .br-wds-image,
+  .br-wds-content {
+    width: 100%;
+  }
+
+  .br-wds-image img {
+    width: 100%;
+    height: 360px;
+    object-fit: contain;
+    margin-top: 79px;
+  }
+
+  .br-wds-item-reverse .br-wds-image {
+    order: 1;
+  }
+
+  .br-wds-item-reverse .br-wds-content {
+    order: 2;
+  }
+  .fw-frame {
+    background: #f7f7f2;
+    border-radius: 2px;
+    flex: 331px;
+   max-width: 211px;
+    padding: 14px;
+    box-shadow: 0 22px 45px #0006;
+}
+.fw-row {
+    z-index: 1;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 69px;
+    width: 100%;
+    max-width: 2987px;
+    display: flex;
+    position: relative;
+}
+
+  .br-fp-grid,
+  .br-fp-grid:hover,
+  .br-fp-grid:has(.br-fp-card:nth-child(1):hover),
+  .br-fp-grid:has(.br-fp-card:nth-child(2):hover),
+  .br-fp-grid:has(.br-fp-card:nth-child(3):hover) {
+    grid-template-columns: 1fr;
+    transition: none;
+  }
+
+  .br-fp-card:first-child {
+    grid-column: auto;
+  }
+
+  .br-fp-heading {
+    font-size: 32px;
+  }
+
+  .br-fp-heading-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .br-fp-card,
+  .br-fp-card-image {
+    transition: none;
+  }
+
+  .br-fp-card:hover .br-fp-card-image {
+    transform: none;
   }
 }
 

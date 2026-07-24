@@ -924,3 +924,139 @@ width: min(100%, 1503px);
 .ev-wds-panel-1 .ev-wds-content .ev-wds-desc {
   color: #fff;
 }
+@media (min-width: 800px) and (max-width: 1024px) {
+.ev-wds-image img {
+        width: 100%;
+        height: 370px!important;
+        margin-top: 32px;
+        display: block;
+    }
+  }
+
+@media (min-width: 769px) and (max-width: 1279px) {
+  .ev-eh-section,
+  .ev-fp-section,
+  .ev-gal-section,
+  .ev-git-section {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .ev-eh-heading,
+  .ev-fp-heading,
+  .ev-gal-heading,
+  .ev-git-tagline,
+  .ev-git-heading {
+    font-size: 40px;
+  }
+
+  .ev-eh-eyebrow {
+    margin-top: 72px;
+  }
+
+  .ev-eh-banner {
+    width: 100%;
+    height: 460px;
+  }
+
+  .ev-eh-banner img {
+    height: 100%;
+  }
+
+  .ev-wds-section {
+    padding: 0;
+  }
+
+  .ev-wds-item {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    height: auto;
+    min-height: 100vh;
+    margin-bottom: 0;
+    padding: 72px 48px;
+  }
+
+  .ev-wds-item-reverse .ev-wds-image,
+  .ev-wds-item-reverse .ev-wds-content {
+    order: initial;
+  }
+
+  .ev-wds-image img {
+    width: 100%;
+    height: 420px !important;
+    margin-top: 24px;
+    object-fit: cover;
+  }
+
+  .ev-wds-title {
+    font-size: 32px;
+  }
+
+  .ev-wds-desc {
+    font-size: 18px;
+    line-height: 1.8;
+  }
+
+  .ev-fp-grid,
+  .ev-fp-grid:hover,
+  .ev-fp-grid:has(.ev-fp-card:nth-child(1):hover),
+  .ev-fp-grid:has(.ev-fp-card:nth-child(2):hover),
+  .ev-fp-grid:has(.ev-fp-card:nth-child(3):hover) {
+    grid-template-columns: 1fr;
+    transition: none;
+  }
+
+  .ev-fp-card:first-child {
+    grid-column: auto;
+  }
+
+  .ev-fp-heading {
+    font-size: 32px;
+  }
+
+  .ev-fp-heading-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .ev-fp-card,
+  .ev-fp-card-image {
+    transition: none;
+  }
+
+  .ev-fp-card:hover .ev-fp-card-image {
+    transform: none;
+  }
+
+  .ev-gal-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .ev-gal-tag-category {
+    font-size: 1vw;
+  }
+
+  .ev-gal-tag-title {
+    font-size: 1.35vw;
+  }
+
+  .ev-gal-vip-label {
+    font-size: 1vw;
+  }
+
+  .ev-git-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .ev-git-image {
+    order: -1;
+    min-height: 420px;
+  }
+
+  .ev-git-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}

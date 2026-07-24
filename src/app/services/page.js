@@ -1,6 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
 import "./Services.css";
 
 const images = [
@@ -98,6 +101,142 @@ const categories = [
 ];
 
 export default function services() {
+  useEffect(() => {
+    const wrapper = document.querySelector(".orbit-wrapper");
+
+    if (!wrapper) return;
+
+    const cards = gsap.utils.toArray(".orbit-card", wrapper);
+    const TAU = Math.PI * 2;
+    const duration = 36;
+    const state = {
+      active: false,
+      centerX: 0,
+      centerY: 0,
+      radius: 0,
+      cards: [],
+    };
+
+    let resizeFrame = null;
+    let resizeObserver = null;
+
+    const clearMotion = () => {
+      cards.forEach((card) => {
+        card.style.translate = "";
+      });
+    };
+
+    const measureOrbit = () => {
+      clearMotion();
+
+      const wrapperStyle = window.getComputedStyle(wrapper);
+      const canOrbit =
+        wrapperStyle.position !== "static" &&
+        cards.every((card) => window.getComputedStyle(card).position === "absolute");
+
+      state.active = canOrbit;
+
+      if (!canOrbit) return;
+
+      const wrapperRect = wrapper.getBoundingClientRect();
+      const centerX = wrapperRect.width / 2;
+      const centerY = wrapperRect.height / 2;
+      const measurements = cards.map((card) => {
+        const rect = card.getBoundingClientRect();
+        const baseX = rect.left - wrapperRect.left;
+        const baseY = rect.top - wrapperRect.top;
+        const cardCenterX = baseX + rect.width / 2;
+        const cardCenterY = baseY + rect.height / 2;
+
+        return {
+          card,
+          baseX,
+          baseY,
+          width: rect.width,
+          height: rect.height,
+          angle: Math.atan2(cardCenterY - centerY, cardCenterX - centerX),
+        };
+      });
+
+      const maxCardWidth = Math.max(...measurements.map((card) => card.width));
+      const maxCardHeight = Math.max(...measurements.map((card) => card.height));
+      const maxSafeRadius = Math.max(
+        0,
+        Math.min(
+          (wrapperRect.width - maxCardWidth) / 2,
+          (wrapperRect.height - maxCardHeight) / 2
+        )
+      );
+      const radius = maxSafeRadius;
+      const sortedMeasurements = [...measurements].sort((a, b) => a.angle - b.angle);
+      const step = TAU / sortedMeasurements.length;
+      const startAngle = sortedMeasurements[0]?.angle ?? -Math.PI / 2;
+
+      sortedMeasurements.forEach((measurement, index) => {
+        measurement.phase = startAngle + step * index;
+      });
+
+      state.centerX = centerX;
+      state.centerY = centerY;
+      state.radius = radius;
+      state.cards = measurements;
+    };
+
+    const renderOrbit = () => {
+      if (!state.active) return;
+
+      const angleOffset = (gsap.ticker.time / duration) * TAU;
+
+      state.cards.forEach((item) => {
+        const angle = item.phase + angleOffset;
+        const x =
+          state.centerX +
+          Math.cos(angle) * state.radius -
+          item.width / 2 -
+          item.baseX;
+        const y =
+          state.centerY +
+          Math.sin(angle) * state.radius -
+          item.height / 2 -
+          item.baseY;
+
+        item.card.style.translate = `${x}px ${y}px`;
+      });
+    };
+
+    const refreshOrbit = () => {
+      if (resizeFrame) {
+        window.cancelAnimationFrame(resizeFrame);
+      }
+
+      resizeFrame = window.requestAnimationFrame(() => {
+        measureOrbit();
+        renderOrbit();
+      });
+    };
+
+    measureOrbit();
+    renderOrbit();
+    gsap.ticker.add(renderOrbit);
+    window.addEventListener("resize", refreshOrbit);
+
+    if ("ResizeObserver" in window) {
+      resizeObserver = new ResizeObserver(refreshOrbit);
+      resizeObserver.observe(wrapper);
+    }
+
+    return () => {
+      if (resizeFrame) {
+        window.cancelAnimationFrame(resizeFrame);
+      }
+
+      window.removeEventListener("resize", refreshOrbit);
+      resizeObserver?.disconnect();
+      gsap.ticker.remove(renderOrbit);
+      clearMotion();
+    };
+  }, []);
+
   return (
     <>
       {/* ── Orbit Grid Section ──────────────────────────── */}

@@ -138,7 +138,7 @@ Talk to us
         </div>
       </section>
  <section className="brands-section">
-      <h2 className="brands-heading">BRANDS WE&apos;VE BROUGHT TO LIFE</h2>
+      <p className="brands-eyebrow">BRANDS WE&apos;VE BROUGHT TO LIFE</p>
  
       <div className="marquee" aria-label="Brand names scrolling">
         <div className="marquee-track">
@@ -360,7 +360,7 @@ every detail is owned in-house.
         <div className="tm-heading-row">
           <h2 className="tm-heading">What partners say.</h2>
           <button className="tm-arrow-btn" aria-label="Next testimonials">
-            &rarr;
+            <img src="/Images/Arrow.png" alt="" aria-hidden="true" />
           </button>
         </div>
  
@@ -415,7 +415,7 @@ every detail is owned in-house.
         </div>
       </div>
     </section>
-    <section className="git-section">
+    <section id="contact" className="git-section">
       <div className="git-container">
         {/* Logo — replace src with your own file */}
         <img src="/Images/Vision.webp" alt="Vision Infinite" className="git-logo" />

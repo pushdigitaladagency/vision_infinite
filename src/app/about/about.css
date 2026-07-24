@@ -1,104 +1,774 @@
-/* ===== ABOUT PAGE ===== */
-.about-hero {
-  padding: 160px 48px 80px;
+.ab-section {
+      background: #fff;
+    padding: 72px 99px 96px;
+}
+
+.ab-container {
+    max-width: 2080px;
+    margin: 0 auto;
+}
+
+/* ---- Eyebrow ---- */
+.ab-eyebrow {
+  color: #8a8a8a;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
   text-align: center;
-  background: var(--bg-secondary);
-  border-bottom: 1px solid var(--border-subtle);
+  text-transform: uppercase;
+  margin: 0 0 24px;
 }
 
-.about-hero h1 {
-  font-size: 56px;
-  font-weight: 900;
-  letter-spacing: -2px;
-  margin-bottom: 16px;
+/* ---- Heading ---- */
+.ab-heading {
+  color: #111;
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  text-align: center;
+      margin: 52px 0 48px;
 }
 
-.about-hero p {
-  font-size: 18px;
-  color: var(--text-secondary);
-  max-width: 600px;
-  margin: 0 auto;
-  line-height: 1.7;
+.ab-gradient {
+  background: linear-gradient(90deg, #e6127d 0%, #8b3ff0 55%, #3b9df5 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-.about-content {
+/* ---- Banner image ---- */
+.ab-banner {
+  border-radius: 24px;
+  overflow: hidden;
+  margin: 0 auto 56px;
+  width: 80%;
+  max-width: 100%;
+  height: 570px;
+}
+
+.ab-banner img,
+.ab-banner video {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* ---- Two text columns ---- */
+.ab-text-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
-  align-items: start;
+  max-width: 1526px;
+  margin: 0 auto 72px;
 }
 
-.about-content h2 {
-  font-size: 36px;
+.ab-text {
+  color: #444;
+  font-size: 20px;
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ---- Stats row ---- */
+.ab-stats {
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    max-width: 1854px;
+    margin: 0 0px;
+    display: grid;
+}
+.ab-stat-number {
+  color: #b81588;
+  font-size: 49px;
   font-weight: 800;
-  letter-spacing: -1px;
-  margin-bottom: 20px;
+  margin: 0 0 8px;
 }
 
-.about-content p {
-  font-size: 15px;
-  color: var(--text-secondary);
-  line-height: 1.8;
-  margin-bottom: 16px;
+.ab-stat-label {
+  color: #8a8a8a;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.hwt-section {
+  background: #0d0d0d;
+  padding: 96px 24px;
 }
 
-.about-visual {
-  height: 360px;
-  border-radius: var(--radius-lg);
-  background: linear-gradient(135deg, #1a1a1a, #111);
-  border: 1px solid var(--border-subtle);
+.hwt-container {
+  max-width: 1580px;
+  margin: 0 auto;
+}
+
+/* ---- Eyebrow ---- */
+.hwt-eyebrow {
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 80px;
-  opacity: 0.15;
-}
-
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-top: 48px;
-}
-
-.value-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-lg);
-  padding: 36px 28px;
-  text-align: center;
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
-
-.value-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--border-light);
-}
-
-.value-icon {
-  font-size: 36px;
-  margin-bottom: 16px;
-}
-
-.value-card h3 {
-  font-size: 18px;
+  gap: 12px;
+  color: #f0128c;
+  font-size: 12px;
   font-weight: 700;
-  margin-bottom: 10px;
+  letter-spacing: 0.25em;
+  margin: 0 0 24px;
 }
 
-.value-card p {
-  font-size: 13px;
-  color: var(--text-secondary);
+.hwt-eyebrow-line {
+  display: inline-block;
+  width: 22px;
+  height: 2px;
+  background: #f0128c;
+}
+
+/* ---- Heading ---- */
+.hwt-heading {
+  color: #fff;
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin: 0 0 24px;
+}
+
+/* ---- Intro paragraph ---- */
+.hwt-intro {
+  color: #cfcfcf;
+  font-size: 21px;
   line-height: 1.7;
+  margin: 0 0 48px;
+}
+
+/* ---- Cards grid ---- */
+.hwt-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.hwt-card {
+  border-radius: 16px;
+  padding: 32px;
+  
+}
+
+/* card colors */
+.hwt-card-purple {
+  background: #c9b8f5;
+}
+
+.hwt-card-lime {
+  background: #dff585;
+}
+
+.hwt-card-blue {
+  background: #a8d5f2;
+}
+
+.hwt-card-pink {
+  background: #f9a8d4;
+}
+
+/* ---- Card content ---- */
+.hwt-card-number {
+  color: #333;
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.hwt-card-title {
+  color: #111;
+  font-size: 21px;
+  font-weight: 800;
+  margin: 0 0 14px;
+}
+
+.hwt-card-text {
+  color: #222;
+     font-size: 20px;
+  line-height: 1.7;
+  margin: 0;
+}
+.hwk-section {
+  background: #fff;
+  padding: 96px 24px;
+}
+
+.hwk-container {
+ max-width: 1580px;
+  margin: 0 auto;
+}
+
+/* ---- Eyebrow ---- */
+.hwk-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #f0128c;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  margin: 0 0 24px;
+}
+
+.hwk-eyebrow-line {
+  display: inline-block;
+  width: 28px;
+  height: 2px;
+  background: #f0128c;
+}
+
+/* ---- Heading ---- */
+.hwk-heading {
+  color: #111;
+  font-size: 52px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 56px;
+}
+
+/* ---- Steps row ---- */
+.hwk-steps {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+ gap: 55px;
+}
+
+/* gradient number badge */
+.hwk-step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e6127d 0%, #8b23c9 100%);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 22px;
+}
+
+.hwk-step-title {
+  color: #111;
+  
+    font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 12px;
+}
+
+.hwk-step-desc {
+  color: #9a9aa5;
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+}
+.wd-section {
+  background: #0d0d0d;
+  padding: 96px 24px;
+}
+ 
+.wd-container {
+ max-width: 1580px;
+  margin: 0 auto;
+}
+ 
+/* ---- Eyebrow ---- */
+.wd-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #f0128c;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  margin: 0 0 24px;
+}
+ 
+.wd-eyebrow-line {
+  display: inline-block;
+  width: 28px;
+  height: 2px;
+  background: #f0128c;
+}
+ 
+/* ---- Heading ---- */
+.wd-heading {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin: 0 0 56px;
+}
+ 
+/* ---- List container ---- */
+.wd-list {
+  border: 1px solid #333;
+  border-radius: 2px;
+  overflow: hidden;
+}
+ 
+/* ---- List items ---- */
+.wd-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 24px 32px;
+  border-bottom: 1px solid #333;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+ 
+.wd-item:last-child {
+  border-bottom: none;
+}
+ 
+.wd-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+ 
+/* ---- Item content ---- */
+.wd-item-number {
+  color: #8a8a8a;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  min-width: 32px;
+  flex-shrink: 0;
+}
+ 
+.wd-item-title {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  flex: 1;
+  text-transform: uppercase;
+}
+ 
+.wd-item-arrow {
+  color: #f0128c;
+  font-size: 20px;
+  font-weight: 300;
+  flex-shrink: 0;
+}
+.git-section {
+  background: #fafafa;
+  padding: 80px 24px 96px;
+}
+ 
+.git-container {
+ max-width: 1580px;
+  margin: 0 auto;
+}
+ 
+/* ---- Logo + headings ---- */
+.git-logo {
+  display: block;
+  width: 120px;
+  height: auto;
+  margin: 0 auto 28px;
+}
+ 
+.git-tagline {
+  color: #111;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  text-align: center;
+  margin: 0 0 56px;
+}
+ 
+.git-eyebrow {
+  color: #111;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-align: center;
+  margin: 0 0 12px;
+  font-family: "Courier New", ui-monospace, monospace;
+}
+ 
+.git-heading {
+  color: #111;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  margin: 0 0 56px;
+}
+ 
+/* ---- Two-column layout ---- */
+.git-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 64px;
+  align-items: stretch;
+}
+ 
+/* ---- Form ---- */
+.git-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+ 
+.git-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+ 
+.git-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+ 
+.git-field label {
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+}
+ 
+.git-field input,
+.git-field select,
+.git-field textarea {
+  background: #e2e4f8;
+  border: none;
+  border-radius: 6px;
+  padding: 14px 16px;
+  font-size: 15px;
+  color: #333;
+  font-family: inherit;
+  width: 100%;
+  outline: none;
+  transition: box-shadow 0.2s ease;
+}
+ 
+.git-field input::placeholder,
+.git-field textarea::placeholder {
+  color: #8a8fa8;
+}
+ 
+.git-field input:focus,
+.git-field select:focus,
+.git-field textarea:focus {
+  box-shadow: 0 0 0 2px #b39ddb;
+}
+ 
+.git-field select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23555' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  cursor: pointer;
+}
+ 
+.git-field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+ 
+/* ---- Submit button ---- */
+.git-submit {
+  background: linear-gradient(90deg, #f0128c 0%, #8b23c9 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: opacity 0.2s ease, transform 0.15s ease;
+}
+ 
+.git-submit:hover {
+  opacity: 0.92;
+}
+ 
+.git-submit:active {
+  transform: scale(0.99);
+}
+ 
+.git-submit-icon {
+  font-size: 14px;
+}
+ 
+/* ---- Right image ---- */
+.git-image {
+  border-radius: 20px;
+  overflow: hidden;
+}
+ 
+.git-image img,
+.git-image video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+ 
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .git-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+ 
+  .git-image {
+    order: -1; /* image above the form when stacked */
+    max-height: 380px;
+  }
+ 
+  .git-tagline {
+    font-size: 32px;
+  }
+ 
+  .git-heading {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+}
+ 
+@media (max-width: 560px) {
+  .git-section {
+    padding: 64px 20px;
+  }
+ 
+  .git-row {
+    grid-template-columns: 1fr;
+  }
+ 
+  .git-tagline {
+    font-size: 26px;
+  }
+}
+
+ 
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .wd-heading {
+    font-size: 36px;
+    margin-bottom: 48px;
+  }
+ 
+  .wd-item {
+    padding: 20px 24px;
+  }
+}
+ 
+@media (max-width: 640px) {
+  .wd-section {
+    padding: 64px 20px;
+  }
+ 
+  .wd-heading {
+    font-size: 28px;
+  }
+ 
+  .wd-item {
+    padding: 16px 20px;
+    gap: 16px;
+  }
+ 
+  .wd-item-title {
+    font-size: 13px;
+  }
+}
+/* ---- Responsive ---- */
+@media (max-width: 1024px) {
+  .hwk-steps {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 48px;
+  }
 }
 
 @media (max-width: 900px) {
-  .about-content { grid-template-columns: 1fr; }
-  .values-grid { grid-template-columns: 1fr; }
-  .about-hero h1 { font-size: 40px; }
+  .hwk-heading {
+    font-size: 38px;
+    margin-bottom: 48px;
+  }
 }
 
-@media (max-width: 600px) {
-  .about-hero { padding: 120px 20px 60px; }
-  .about-hero h1 { font-size: 32px; }
+@media (max-width: 640px) {
+  .hwk-steps {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .hwk-section {
+    padding: 64px 20px;
+  }
+
+  .hwk-heading {
+    font-size: 30px;
+  }
+
+  .hwk-steps {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 800px) {
+  .hwt-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hwt-heading {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hwt-section {
+    padding: 64px 20px;
+  }
+
+  .hwt-heading {
+    font-size: 26px;
+  }
+
+  .hwt-card {
+    padding: 24px;
+    border-radius: 12px;
+  }
+}
+/* ---- Responsive ---- */
+@media (max-width: 900px) {
+  .ab-heading {
+    font-size: 34px;
+  }
+
+  .ab-text-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 56px;
+  }
+
+  .ab-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ab-section {
+    padding: 56px 20px 72px;
+  }
+
+  .ab-heading {
+    font-size: 28px;
+  }
+
+  .ab-banner {
+    border-radius: 16px;
+    margin-bottom: 40px;
+    height: auto;
+    aspect-ratio: 1012 / 570;
+  }
+
+  .ab-stat-number {
+    font-size: 28px;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1700px) {
+.hwt-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.hwk-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.wd-container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.hwt-section {
+    background: #0d0d0d;
+    padding: 96px 74px;
+}
+.hwk-section {
+    background: #fff;
+    padding: 96px 74px;
+}
+.wd-section {
+    background: rgb(13, 13, 13);
+     padding: 96px 74px;
+}
+.git-section {
+    background: rgb(250, 250, 250);
+    padding: 80px 74px 96px;
+}
+}
+@media (min-width: 787px) and (max-width: 1279px) {
+  .ab-section,
+  .hwt-section,
+  .hwk-section,
+  .wd-section,
+  .git-section {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .ab-heading,
+  .hwt-heading,
+  .hwk-heading,
+  .wd-heading,
+  .git-tagline,
+  .git-heading {
+    font-size: 40px;
+  }
+
+  .ab-banner {
+    width: 100%;
+    height: 460px;
+  }
+
+  .ab-text-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .ab-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px 32px;
+    margin: 0 auto;
+  }
+
+  .hwt-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hwk-steps {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 32px;
+  }
+
+  .git-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .git-image {
+    min-height: 420px;
+  }
+
 }

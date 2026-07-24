@@ -787,8 +787,13 @@
     padding: 64px 20px;
   }
 
-  .btl-fp-grid {
+  .btl-fp-grid,
+  .btl-fp-grid:hover,
+  .btl-fp-grid:has(.btl-fp-card:nth-child(1):hover),
+  .btl-fp-grid:has(.btl-fp-card:nth-child(2):hover),
+  .btl-fp-grid:has(.btl-fp-card:nth-child(3):hover) {
     grid-template-columns: 1fr;
+    transition: none;
   }
 
   .btl-fp-card:first-child {
@@ -934,13 +939,97 @@
     background: #fff;
             padding: 2px 43px 16px;
 }
-.btl-wds-detail {
-    color: #020202;
-    margin: 0 0 20px;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 2;
-    text-align: justify;
+    .btl-wds-detail {
+        color: #020202;
+        text-align: justify;
+        margin: 0 0 88px;
+        font-size: 16px;
+        font-weight: 400;
+    }
+}
+
+@media (min-width: 787px) and (max-width: 1279px) {
+  .btl-wds-panel {
+    grid-template-columns: 1fr;
+    align-content: start;
+    gap: 8px;
+    row-gap: 8px;
+    height: 100vh;
+    min-height: 100vh;
+    padding: 0 64px;
+  }
+
+  .btl-wds-panel > .btl-wds-heading {
+    top: 24px;
+    left: 64px;
+  }
+
+  .btl-wds-image,
+  .btl-wds-content {
+    width: 100%;
+  }
+
+  .btl-wds-image img {
+    width: 100%;
+    height: 360px;
+    object-fit: contain;
+    margin-top: 50px;
+  }
+
+  .btl-wds-item-reverse .btl-wds-image {
+    order: 1;
+  }
+
+  .btl-wds-item-reverse .btl-wds-content {
+    order: 2;
+  }
+
+  .btl-fp-grid,
+  .btl-fp-grid:hover,
+  .btl-fp-grid:has(.btl-fp-card:nth-child(1):hover),
+  .btl-fp-grid:has(.btl-fp-card:nth-child(2):hover),
+  .btl-fp-grid:has(.btl-fp-card:nth-child(3):hover) {
+    grid-template-columns: 1fr;
+    transition: none;
+  }
+
+  .btl-fp-card:first-child {
+    grid-column: auto;
+  }
+
+  .btl-fp-heading {
+    font-size: 32px;
+  }
+
+  .btl-fp-heading-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .btl-fp-card,
+  .btl-fp-card-image {
+    transition: none;
+  }
+  .btl-fp-card:hover .btl-fp-card-image {
+    transform: none;
+  }
+  .btl-gal-image {
+    width: 110%;
+    max-width: 113%;
+    height: auto;
+    margin-left: -42px;
+    display: block;
+}
+.btl-fp-container2 {
+    padding: 101px 90px;
+}
+.od-gal-heading-row {
+    justify-content: space-between;
+    align-items: center;
+    gap: 19px;
+    margin-bottom: 40px;
+    margin-left: 15px;
+    display: flex;
 }
 }
 

@@ -198,6 +198,33 @@
 }
 
 /* ── Responsive: collapse to grid on smaller screens ─ */
+@media (min-width: 1440px) {
+  .orbit-wrapper {
+    --orbit-card-width: 240px;
+    --orbit-card-height: 181px;
+  }
+}
+
+@media (min-width: 1181px) and (max-width: 1439px) {
+  .orbit-wrapper {
+    --orbit-card-width: 220px;
+    --orbit-card-height: 166px;
+  }
+}
+
+@media (min-width: 1181px) and (max-width: 1280px) {
+  .orbit-wrapper {
+    height: 860px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1180px) {
+  .orbit-wrapper {
+    --orbit-card-width: 210px;
+    --orbit-card-height: 158px;
+  }
+}
+
 @media (max-width: 900px) {
   .orbit-wrapper {
     position: static;
@@ -894,6 +921,104 @@
     height: 150px;
 }
 
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .orbit-wrapper {
+    --orbit-card-width: 118px;
+    --orbit-card-height: 90px;
+    width: min(100%, 720px);
+    max-width: 720px;
+    height: 500px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    gap: 0;
+  }
+
+  .orbit-card {
+    position: absolute !important;
+    width: var(--orbit-card-width) !important;
+    height: var(--orbit-card-height) !important;
+    transform: none !important;
+    overflow: visible;
+    box-shadow: none;
+  }
+
+  .orbit-card::before {
+    content: "";
+    position: absolute;
+    inset: 6%;
+    border-radius: 12px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
+    pointer-events: none;
+  }
+
+  .orbit-card:hover {
+    box-shadow: none;
+  }
+
+  .orbit-card:hover::before {
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
+  }
+
+  .orbit-card-image {
+    position: absolute;
+    inset: 6%;
+    width: 88% !important;
+    height: 88% !important;
+    border-radius: 12px;
+  }
+
+  .orbit-card-1 {
+    top: 78px;
+    left: 92px;
+  }
+
+  .orbit-card-2 {
+    top: 0;
+    left: 50%;
+  }
+
+  .orbit-card-3 {
+    top: 78px;
+    right: 92px;
+  }
+
+  .orbit-card-4 {
+    top: 230px;
+    left: 20px;
+  }
+
+  .orbit-card-5 {
+    top: 230px;
+    right: 20px;
+  }
+
+  .orbit-card-6 {
+    bottom: 48px;
+    left: 92px;
+  }
+
+  .orbit-card-7 {
+    bottom: 0;
+    left: 50%;
+  }
+
+  .orbit-card-8 {
+    right: 92px;
+    bottom: 48px;
+  }
+
+  .orbit-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    grid-column: auto;
+    width: 250px;
+    margin: 0;
+    transform: translate(-50%, -50%);
+  }
 }
 
 @media (max-width: 420px) {

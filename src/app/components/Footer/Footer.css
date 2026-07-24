@@ -36,7 +36,7 @@
 .footer-description {
   line-height: 1.6;
   margin: 0;
-  font-size: 14px;
+  font-size: 18px;
 }
 
 .footer-heading {
@@ -69,6 +69,16 @@
   color: #ffffff;
 }
 
+@media (min-width: 769px) {
+  .footer-content > .footer-column:nth-child(2) .footer-links a,
+  .footer-content > .footer-column:nth-child(3) .footer-links a,
+  .footer-content > .footer-column:nth-child(4) .footer-links a,
+  .footer-contact-list,
+  .footer-contact-list a {
+    font-size: 18px;
+  }
+}
+
 .footer-contact-list {
   list-style: none;
   padding: 0;
@@ -98,7 +108,7 @@
 }
 
 .footer-bottom {
-  max-width: 1200px;
+  max-width: 1500px;
   margin: 60px auto 0;
   padding-top: 25px;
   display: flex;

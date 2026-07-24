@@ -262,7 +262,7 @@ export default function EventsHero() {
           Label positions live in GallerySection.css (.gal-tag-1 ... .gal-tag-5) */}
       <div className="gal-image-wrap">
         <img
-          src="/Images/tag.webp"
+          src="/Images/tag.png"
           alt="Gallery of Vision Infinite event badges"
           className="gal-image"
         />

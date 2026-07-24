@@ -2,13 +2,14 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import "./Navbar.css";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +23,30 @@ export default function Navbar() {
   useEffect(() => {
     setMenuOpen(false);
   }, [pathname]);
+
+  useEffect(() => {
+    if (pathname !== "/" || sessionStorage.getItem("scrollToContact") !== "true") {
+      return;
+    }
+
+    sessionStorage.removeItem("scrollToContact");
+    requestAnimationFrame(() => {
+      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+    });
+  }, [pathname]);
+
+  const handleContactClick = (event) => {
+    event.preventDefault();
+    setMenuOpen(false);
+
+    if (pathname === "/") {
+      document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+      return;
+    }
+
+    sessionStorage.setItem("scrollToContact", "true");
+    router.push("/");
+  };
 
   const navItems = [
     { label: "Home", href: "/" },
@@ -50,6 +75,7 @@ export default function Navbar() {
               <Link
                 href={item.href}
                 className={pathname === item.href ? "active" : ""}
+                onClick={item.label === "Contact" ? handleContactClick : undefined}
               >
                 {item.label}
               </Link>
